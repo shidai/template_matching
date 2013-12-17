@@ -18,13 +18,16 @@ double find_peak_value (int n, double *s);
 
 int preA7 (int *k, double *amp_s, double *amp_p, double *phi_s, double *phi_p, double *s, double *p, int N);
 
-double A7 (double phase);
-//double A7 (int n, double *amp_s, double *amp_p, double *phi_s, double *phi_p, double phase);
+//double A7 (double phase);
+double A7 (double phase, double *a_s, double *a_p, double *p_s, double *p_p, int num);
 
-double A9 (double phase);
+//double A9 (double phase);
+double A9 (double phase, double *a_s, double *a_p, double *p_s, double *p_p, int num);
 
-double zbrent(double (*func)(double), double x1, double x2, double tol);
+//double zbrent(double (*func)(double), double x1, double x2, double tol);
+double zbrent(double (*func)(double phase, double *a_s, double *a_p, double *p_s, double *p_p, int num), double x1, double x2, double tol, double *a_s, double *a_p, double *p_s, double *p_p, int num);
 
 int find_peak (int n, double *s, int *position);
 
-int error (double phase, double b, double *errphase, double *errb);
+//int error (double phase, double b, double *errphase, double *errb);
+int error (double phase, double b, double *errphase, double *errb, double *a_s, double *a_p, double *p_s, double *p_p, int num);

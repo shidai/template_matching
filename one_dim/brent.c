@@ -12,11 +12,11 @@
 //#define EPS 3.0e-8 // Machine floating-point precision.
 #define SIGN(a,b) ((b) >= 0.0 ? fabs(a) : -fabs(a))
 
-double zbrent(double (*func)(double), double x1, double x2, double tol)
+double zbrent(double (*func)(double phase, double *a_s, double *a_p, double *p_s, double *p_p, int num), double x1, double x2, double tol, double *a_s, double *a_p, double *p_s, double *p_p, int num)
 {
 	int iter;
 	double a=x1,b=x2,c=x2,d,e,min1,min2;
-	double fa=(*func)(a),fb=(*func)(b),fc,p,q,r,s,tol1,xm;
+	double fa=(*func)(a, a_s, a_p, p_s, p_p, num),fb=(*func)(b, a_s, a_p, p_s, p_p, num),fc,p,q,r,s,tol1,xm;
 
 	if ((fa > 0.0 && fb > 0.0) || (fa < 0.0 && fb < 0.0))
 		puts ("Root must be bracketed in zbrent\n");
@@ -89,7 +89,7 @@ double zbrent(double (*func)(double), double x1, double x2, double tol)
 		else
 			b += SIGN(tol1,xm);
 
-		fb=(*func)(b);
+		fb=(*func)(b, a_s, a_p, p_s, p_p, num);
 	}
 
 	puts ("Maximum number of iterations exceeded in zbrent\n");

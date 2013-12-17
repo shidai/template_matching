@@ -7,8 +7,8 @@
 #include <math.h>
 #include "get_toa.h"
 
-double *a_s,*a_p,*p_s,*p_p;
-int num;
+//double *a_s,*a_p,*p_s,*p_p;
+//int num;
 
 int main (int argc, char *argv[])
 {
@@ -16,7 +16,7 @@ int main (int argc, char *argv[])
 	
 	//puts(argv[1]);
 	//puts(argv[2]);
-	double t[512],s[512];
+	double t[1024],s[1024];
 	int n;
 
 	readfile(argv[1],&n,t,s);
@@ -26,7 +26,7 @@ int main (int argc, char *argv[])
 	//////////////////////////////////////////////////////////////////////////
 	// simulate data
 
-	double p[512];
+	double p[1024];
 	double SNR=atof(argv[2]);
 	simulate(n,SNR,s,p);//*/
 	
@@ -40,6 +40,8 @@ int main (int argc, char *argv[])
 
 	preA7(&k, amp_s, amp_p, phi_s, phi_p, s, p, n);
 	
+    double *a_s,*a_p,*p_s,*p_p;
+    int num;
 	a_s=amp_s;
 	a_p=amp_p;
 	p_s=phi_s;
@@ -64,7 +66,7 @@ int main (int argc, char *argv[])
 		ini_phase=2.0*3.1415926*(511-d)/512.0;
 		up_phase=ini_phase+step;
 		low_phase=ini_phase-step;
-		while (A7(up_phase)*A7(low_phase)>0.0)
+		while (A7(up_phase, a_s, a_p, p_s, p_p, num)*A7(low_phase, a_s, a_p, p_s, p_p, num)>0.0)
 		{
 		    up_phase+=step;
 		    low_phase-=step;
@@ -75,7 +77,7 @@ int main (int argc, char *argv[])
 		ini_phase=-2.0*3.1415926*d/512.0;
 		up_phase=ini_phase+step;
 		low_phase=ini_phase-step;
-		while (A7(up_phase)*A7(low_phase)>0.0)
+		while (A7(up_phase, a_s, a_p, p_s, p_p, num)*A7(low_phase, a_s, a_p, p_s, p_p, num)>0.0)
 		{
 		    up_phase+=step;
 		    low_phase-=step;
@@ -84,10 +86,10 @@ int main (int argc, char *argv[])
 
     // calculate phase shift, a and b
     double phase,b;
-    phase=zbrent(A7, low_phase, up_phase, 1.0e-16);
+    phase=zbrent(A7, low_phase, up_phase, 1.0e-16, a_s, a_p, p_s, p_p, num);
     //phase=zbrent(A7, -1.0, 1.0, 1.0e-16);
     //phase=zbrent(A7, -0.005, 0.005, 1.0e-16);
-    b=A9(phase);
+    b=A9(phase, a_s, a_p, p_s, p_p, num);
     //a=A4(b);
 
 		
@@ -101,7 +103,7 @@ int main (int argc, char *argv[])
 	// calculate the errors of phase and b
     double errphase, errb;	
 
-	error(phase,b,&errphase,&errb);
+	error(phase,b,&errphase,&errb, a_s, a_p, p_s, p_p, num);
 	printf ("%.10lf %.10lf\n", ((phase/3.1415926)*5.75/2.0)*1.0e+3, ((errphase/3.1415926)*5.75/2.0)*1.0e+3);  // microseconds
 	//printf ("errphase %.10lf \n", ((errphase/3.1415926)*5.75/2.0)*1.0e+6);
 	//printf ("errb %.10lf \n", errb);

@@ -6,11 +6,11 @@
 #include <fftw3.h>
 #include "get_toa.h"
 
-extern double *a_s,*a_p,*p_s,*p_p;
-extern int num;
+//extern double *a_s,*a_p,*p_s,*p_p;
+//extern int num;
 
 //int error (double phase, double b, double a,  double *errphase, double *errb)
-int error (double phase, double b, double *errphase, double *errb)
+int error (double phase, double b, double *errphase, double *errb, double *a_s, double *a_p, double *p_s, double *p_p, int num)
 {
 	double rms,gk,s1,s2;
 	int i,n;

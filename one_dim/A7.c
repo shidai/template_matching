@@ -6,10 +6,10 @@
 #include <fftw3.h>
 #include "get_toa.h"
 
-extern double *a_s,*a_p,*p_s,*p_p;
-extern int num;
+//extern double *a_s,*a_p,*p_s,*p_p;
+//extern int num;
 
-double A7 (double phase)
+double A7 (double phase, double *a_s, double *a_p, double *p_s, double *p_p, int num)
 //double A7 (int n, double *amp_s, double *amp_p, double *phi_s, double *phi_p, double phase)
 {
 	double A7=0;
