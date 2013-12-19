@@ -81,9 +81,9 @@ int main (int argc, char *argv[])
 	double rms[nchn];  // rms for each profile
 	int h,i,j;
 	double phase, e_phase;
-	double dt, e_dt;  
+	long double dt, e_dt;  
 	long double t;     // TOA
-	long double offset;   // offset of each subint
+	double offset;   // offset of each subint
 	long double mjd0;  // the mjd of each subint
 	T2Predictor pred;
 	int ret;
@@ -126,8 +126,14 @@ int main (int argc, char *argv[])
 			exit(1);
 		}
 
+		// get the offset of each subint
+		offset = read_offs(name_data, h);
+
 		// get the period at mjd0
-		mjd0 = imjd + ((long double)(smjd) + (long double)(offs) + (long double)(offset))/86400.0L;
+		mjd0 = (long double)(imjd) + ((long double)(smjd) + (long double)(offs) + (long double)(offset))/86400.0L;
+		printf ("imjd is %ld \n", imjd);
+		printf ("mjd0 is %.15Lf \n", mjd0);
+
 		period = 1.0/T2Predictor_GetFrequency(&pred,mjd0,freq);
 	    printf ("Period is %.15lf\n", period);
 	
@@ -135,19 +141,18 @@ int main (int argc, char *argv[])
 		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase);
 
 		// transform phase shift to time shift
-        dt = ((long double)(phase)/PI)*period/2.0;
-        e_dt = ((long double)(e_phase)/PI)*period/2.0;
-	    printf ("dt is %.8lf +/- %.8lf\n", dt, e_dt);
-
-		// get the offset of each subint
-		offset = read_offs(name_data, h);
+        //dt = (phase/PI)*period/2.0;
+        //e_dt = (e_phase/PI)*period/2.0;
+        dt = ((long double)(phase)/PI)*((long double)(period))/2.0L;
+        e_dt = ((long double)(e_phase)/PI)*((long double)(period))/2.0L;
+	    printf ("dt is %.10Lf +/- %.10Lf\n", dt, e_dt);
 
 		// calculate the TOA
-        t = (long double)(imjd) + ((long double)(smjd) + (long double)(offs) + (long double)(dt) + (long double)(offset))/86400.0L;
+        t = (long double)(imjd) + ((long double)(smjd) + (long double)(offs) - (long double)(dt) + (long double)(offset))/86400.0L;
         //t = imjd;
 		
-	    printf ("offset is %Lf\n", offset);
-		printf ("TOA is %.15Lf +/- %lf\n", t, e_dt*1e+9);
+	    printf ("offset is %lf\n", offset);
+		printf ("TOA is %.15Lf +/- %Lf\n", t, e_dt*1e+9);
 	}
 
 	return 0;

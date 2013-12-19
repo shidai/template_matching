@@ -1,0 +1,2309 @@
+Pulsar::Archive::load with 9 Agents
+Pulsar::Archive::load testing Timer
+Timer::load convert endian
+Timer::load not a timer header
+  Timer::is_timer invalid MJD=544109933
+Pulsar::TimerArchive::Agent::advocate fail Timer::fload
+Pulsar::Archive::load testing Baseband
+Timer::load convert endian
+Timer::load not a timer header
+  Timer::is_timer invalid MJD=544109933
+Pulsar::Archive::load testing EPN
+Pulsar::Archive::load testing ASP
+IntegrationManager null constructor
+Pulsar::Archive ctor this=0x7fff1a156120 instances=1
+Pulsar::Archive::init
+Pulsar::BasicArchive dtor this=0x7fff1a156120
+Pulsar::Archive dtor this=0x7fff1a156120 instances=0
+Pulsar::IntegrationManager dtor this=0x7fff1a156120
+ASP load failed due to: 
+Error::stack
+	Pulsar::ASPArchive::load_header
+Error::InvalidState
+Error::message
+	Unrecognized HDRVER=4.9 in file J1713+0747_20cm_ana_PDFB4.std
+
+Pulsar::Archive::load testing PSRFITS
+Pulsar::FITSArchive::Agent::advocate test J1713+0747_20cm_ana_PDFB4.std
+FITSAgent::advocate test reading MJD
+Pulsar::Archive::load using PSRFITS
+IntegrationManager null constructor
+Pulsar::Archive ctor this=0x17ead20 instances=1
+Pulsar::Archive::init
+FITSArchive default construct
+Pulsar::Archive::add_extension appending FITSHdrExtension
+FITSArchive::load_header fits_open_file (J1713+0747_20cm_ana_PDFB4.std)
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar12ObsExtensionE
+Pulsar::Archive::add_extension appending ObsExtension
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+FITSArchive::load_header reading FITS header version
+psrfits_read_key: HDRVER=4.9
+Got: Version 4.9
+FITSArchive::load_header reading file creation date
+psrfits_read_key: DATE=2011-01-13T09:06:20
+FITSArchive::load_header reading observer name
+psrfits_read_key: OBSERVER=DJC,
+Got observer: DJC,
+FITSArchive::load_header reading project ID
+psrfits_read_key: PROJID=P456
+Got PID: P456
+FITSArchive::load_header reading telescope name
+psrfits_read_key: TELESCOP=PARKES
+FITSArchive::load_header TELESCOP=PARKES
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar9TelescopeE
+Pulsar::Archive::add_extension appending Telescope
+Tempo::get_configuration key=CLKDIR
+Tempo::get_configuration key=PARDIR
+Tempo::get_configuration key=TZDIR
+Tempo::get_configuration key=OBS_NIST
+Tempo::get_configuration key=NIST_UTC
+Tempo::get_configuration key=NIST_BIPM
+Tempo::get_configuration key=NIST_PTB
+Tempo::get_configuration key=NIST_AT1
+Tempo::get_configuration key=UT1
+Tempo::get_configuration key=EPHDIR
+Tempo::get_configuration key=EPHFILE
+Tempo::get_configuration key=EPHFILE
+Tempo::get_configuration key=EPHFILE
+Tempo::get_configuration key=EPHFILE
+Tempo::get_configuration key=TDBFILE
+Tempo::get_configuration key=OBSYS
+psrfits_read_key: RA=17:13:49.530
+psrfits_read_key: DEC=+07:47:37.500
+FITSArchive::load_ITRFExtension
+Pulsar::Archive::add_extension appending ITRFExtension
+FITSArchive::load_Receiver
+FITSArchive::load_Receiver reading receiver
+psrfits_read_key: FRONTEND=MULTI
+psrfits_read_key: NRCVR=2
+FITSArchive::load_Receiver reading feed polarization
+psrfits_read_key: FD_POLN=LIN
+FITSArchive::load_Receiver reading XPOL_ANG
+XPOL_ANG: keyword not found in header
+psrfits_read_key: using default=0
+FITSArchive::load_Receiver reading YPOL_ANG
+YPOL_ANG: keyword not found in header
+psrfits_read_key: using default=90
+FITSArchive::load_Receiver reading CAL_ANG
+CAL_ANG: keyword not found in header
+psrfits_read_key: using default=45
+FITSArchive::load_Receiver reading FD_SANG
+FITSArchive::load_Receiver reading FD_HAND
+FITSArchive::load_Receiver reading FD_XYPH
+FITSArchive::load_Receiver reading feed track mode
+psrfits_read_key: FD_MODE=FA
+FITSArchive::load_Receiver reading requested feed angle
+FITSArchive::load_Receiver reading attenuator settings
+Pulsar::Archive::add_extension appending Receiver
+FITSArchive::load_WidebandCorrelator
+psrfits_read_key: BACKEND=PDFB4
+FITSArchive::load_WidebandCorrelator BACKEND=PDFB4
+psrfits_read_key: BECONFIG=pdfb4_1024_256_1024
+FITSArchive::load_WidebandCorrelator BECONFIG=pdfb4_1024_256_1024
+psrfits_read_key: BE_PHASE=-1
+FITSArchive::load_WidebandCorrelator BE_PHASE=-1
+psrfits_read_key: BE_DCC=1
+FITSArchive::load_WidebandCorrelator BE_DCC=1
+FITSArchive::load_WidebandCorrelator reading cycle time
+psrfits_read_key: TCYCLE=10
+FITSArchive::load_WidebandCorrelator reading NRCVR
+psrfits_read_key: NRCVR=2
+FITSArchive::load_WidebandCorrelator reading BE_DELAY
+psrfits_read_key: BE_DELAY=0
+Pulsar::Archive::add_extension appending WidebandCorrelator
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+FITSArchive::load_header reading OBS_MODE
+FITSArchive::load_header OBS_MODE='PSR'
+FITSArchive::load_header using Signal::Pulsar
+psrfits_read_key: OBSFREQ=0
+psrfits_read_key: OBSBW=256
+psrfits_read_key: OBSNCHAN=1024
+CHAN_DM: bad string to double convert
+psrfits_read_key: using default=-1
+FITSArchive::load_header reading source name
+FITSArchive::load_header reading coordinates
+psrfits_read_key: COORD_MD=J2000
+Got coordinate type: J2000
+FITSArchive::load_header reading equinox
+psrfits_read_key: EQUINOX=2000.000
+Got equinox: 2000.000
+psrfits_read_key: RA=17:13:49.530
+psrfits_read_key: STT_CRD1=17:13:49.530
+psrfits_read_key: DEC=+07:47:37.500
+psrfits_read_key: STT_CRD2=+07:47:37.500
+psrfits_read_key: STP_CRD1=
+psrfits_read_key: STP_CRD2=
+FITSArchive::load_header reading track mode
+psrfits_read_key: TRK_MODE=TRACK
+FITSArchive::load_header reading observation date
+psrfits_read_key: DATE-OBS=2008-10-26T03:54:22
+FITSArchive::load_header DATE-0BS parsed into
+ date='2008-10-26'
+ time='03:54:22'
+FITSArchive::load_header reading BPA
+psrfits_read_key: BPA=*
+FITSArchive::load_header reading BMAJ
+psrfits_read_key: BMAJ=*
+FITSArchive::load_header reading BMIN
+psrfits_read_key: BMIN=*
+FITSArchive::load_header reading MJDs
+psrfits_read_key: STT_IMJD=54765
+psrfits_read_key: STT_SMJD=14080
+psrfits_read_key: STT_OFFS=0.00309911
+FITSArchive::load_header MJD=54765:035440.003099108356193
+FITSArchive::load_header reading start LST
+psrfits_read_key: STT_LST=58038.9
+FITSArchive::load_header reading IBEAM
+psrfits_read_key: IBEAM=
+FITSArchive::load_header IBEAM=''
+FITSArchive::load_header reading PNT_ID
+psrfits_read_key: PNT_ID=
+FITSArchive::load_header PNT_ID=''
+FITSArchive::load_header finished with primary HDU
+FITSArchive::load_ProcHistory entered
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=2008-10-26T03:54:22
+load ProcHistory::row DATE_PRO=2008-10-26T03:54:22
+psrfits_read_col: PROC_CMD=PDFB4:2008-10-21_15:27
+load ProcHistory::row PROC_CMD=PDFB4:2008-10-21_15:27
+psrfits_read_col: NSUB=64
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=NONE
+psrfits_read_col: SC_MTHD= 
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Sun Dec  5 14:01:48 2010
+load ProcHistory::row DATE_PRO=Sun Dec  5 14:01:48 2010
+psrfits_read_col: PROC_CMD=pam -d 15.991504206433493655 -E
+load ProcHistory::row PROC_CMD=pam -d 15.991504206433493655 -E
+psrfits_read_col: NSUB=64
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Sun Dec  5 14:02:56 2010
+load ProcHistory::row DATE_PRO=Sun Dec  5 14:02:56 2010
+psrfits_read_col: PROC_CMD=UNKNOWN
+load ProcHistory::row PROC_CMD=UNKNOWN
+psrfits_read_col: NSUB=8
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=2010-12-05 03:02:58.8353
+load ProcHistory::row DATE_PRO=2010-12-05 03:02:58.8353
+psrfits_read_col: PROC_CMD=dlyfix (5.05e-06) pdfb4_1024_256_1024 5.050 0.150 1 54751.30 55319.18 081012 10
+load ProcHistory::row PROC_CMD=dlyfix (5.05e-06) pdfb4_1024_256_1024 5.050 0.150 1 54751.30 55319.18 081012 10
+psrfits_read_col: NSUB=8
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=2010-12-05 03:02:58.8355
+load ProcHistory::row DATE_PRO=2010-12-05 03:02:58.8355
+psrfits_read_col: PROC_CMD=dlyfix (8.92648e-06) pdfb4_1024_256_1024 5.050 0.150 1 54751.30 55319.18 081012
+load ProcHistory::row PROC_CMD=dlyfix (8.92648e-06) pdfb4_1024_256_1024 5.050 0.150 1 54751.30 55319.18 081012
+psrfits_read_col: NSUB=8
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=2010-12-05 03:02:58.8356
+load ProcHistory::row DATE_PRO=2010-12-05 03:02:58.8356
+psrfits_read_col: PROC_CMD=dlyfix (-1.04e-06) 1040 ns path delay
+load ProcHistory::row PROC_CMD=dlyfix (-1.04e-06) 1040 ns path delay
+psrfits_read_col: NSUB=8
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 03:29:58 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 03:29:58 2010
+psrfits_read_col: PROC_CMD=pac  -d database.txt -u fluxcal -u zTcf
+load ProcHistory::row PROC_CMD=pac  -d database.txt -u fluxcal -u zTcf
+psrfits_read_col: NSUB=8
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 04:15:54 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 04:15:54 2010
+psrfits_read_col: PROC_CMD=pam --setnchn 32
+load ProcHistory::row PROC_CMD=pam --setnchn 32
+psrfits_read_col: NSUB=8
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 12:36:51 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 12:36:51 2010
+psrfits_read_col: PROC_CMD=pam -D  -F -T
+load ProcHistory::row PROC_CMD=pam -D  -F -T
+psrfits_read_col: NSUB=1
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 12:37:12 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 12:37:12 2010
+psrfits_read_col: PROC_CMD=psradd -E chris.par -o J1713_20cm_pdfb4_add.czt8f32FtD
+load ProcHistory::row PROC_CMD=psradd -E chris.par -o J1713_20cm_pdfb4_add.czt8f32FtD
+psrfits_read_col: NSUB=42
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 12:37:19 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 12:37:19 2010
+psrfits_read_col: PROC_CMD=UNKNOWN
+load ProcHistory::row PROC_CMD=UNKNOWN
+psrfits_read_col: NSUB=42
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46324e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 12:37:21 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 12:37:21 2010
+psrfits_read_col: PROC_CMD=pam -T
+load ProcHistory::row PROC_CMD=pam -T
+psrfits_read_col: NSUB=1
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46351e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Mon Dec  6 12:37:24 2010
+load ProcHistory::row DATE_PRO=Mon Dec  6 12:37:24 2010
+psrfits_read_col: PROC_CMD=pam -p
+load ProcHistory::row PROC_CMD=pam -p
+psrfits_read_col: NSUB=1
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46351e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Thu Jan 13 20:06:20 2011
+load ProcHistory::row DATE_PRO=Thu Jan 13 20:06:20 2011
+psrfits_read_col: PROC_CMD=pam -r -0.000155
+load ProcHistory::row PROC_CMD=pam -r -0.000155
+psrfits_read_col: NSUB=1
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46351e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Thu Jan 13 20:06:20 2011
+load ProcHistory::row DATE_PRO=Thu Jan 13 20:06:20 2011
+psrfits_read_col: PROC_CMD=UNKNOWN
+load ProcHistory::row PROC_CMD=UNKNOWN
+psrfits_read_col: NSUB=1
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46351e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=1
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=single
+psrfits_read_col: CAL_FILE=t081026_035036.zTcf
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=1
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+FITSArchive::load_ProcHistory calibrated
+Pulsar::Archive::add_extension appending ProcHistory
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar13AuxColdPlasmaE
+Pulsar::Archive::add_extension appending AuxColdPlasma
+FITSArchive::load_ProcHistory exiting
+FITSArchive::load_digistat entered
+Pulsar::FITSArchive::load_digistat no DIG_STAT HDU
+Pulsar::Archive::add_extension appending DigitiserCounts
+FITSArchive::load_Passband entered
+FITSArchive::load_Passband BANDPASS HDU found
+FITSArchive::load_Passband BANDPASS NCH_ORIG=1025 BP_NPOL=2
+FITSArchive::load_Passband offsets read
+FITSArchive::load_Passband scale factors read
+FITSArchive::load_Passband data read
+Pulsar::Archive::add_extension appending Passband
+FITSArchive::load_Passband exiting
+FITSArchive::load_CoherentDedispersion entered
+FITSArchive::load_FluxCalibratorExtension entered
+Pulsar::FITSArchive::load_FluxCalibratorExtension no FLUX_CAL HDU
+FITSArchive::load_CalibratorStokes entered
+Pulsar::FITSArchive::load_CalibratorStokes no CAL_POLN HDU
+FITSArchive::load_PolnCalibratorExtension entered
+Pulsar::FITSArchive::load_PolnCalibratorExtension no FEEDPAR HDU
+FITSArchive::load_FITSSUBHdrExtension entered
+psrfits_read_key: INT_UNIT=SEC
+psrfits_read_key: INT_TYPE=TIME
+psrfits_read_key: NBITS=1
+NCH_STRT: keyword not found in header
+psrfits_read_key: using default=-1
+psrfits_read_key: NSBLK=1
+ZERO_OFF: bad string to double convert
+psrfits_read_key: using default=0
+psrfits_read_key: SIGNINT=0
+Pulsar::Archive::add_extension appending FITSSUBHdrExtension
+Pulsar::FITSArchive::load_Parameters try PSRPARAM
+load_TextParameters entered
+load_text loaded
+PSRJ           J1713+0747
+RAJ            17:13:49.5316275             0.02609848513571095022
+DECJ           +07:47:37.51034              8.04695608852528198630
+F0             218.81183824000043052     1  0.00000017329135933581
+F1             7.0361197634546455521e-14 1  5.462122962910353523e-15
+F2             -1.7830524690082185413e-21 1  1.3725043017080228545e-22
+F3             3.354489143099737513e-29  1  2.5777267810024228117e-30
+F4             -4.1888728065622125984e-37 1  3.2167066405339001152e-38
+F5             2.6041173894387342741e-45 1  2.0004717298864703152e-46
+PEPOCH         53300.000157470784274
+POSEPOCH       53300.000157470784274
+DMEPOCH        53300.000157470784274
+DM             15.9899                      0.00060000000000000000
+PMRA           4.9623181580504187524        0.01641637714894253883
+PMDEC          -3.7406200917594383726       0.03829597101890230698
+PX             0.60668814172978009753       0.10020167454171975685
+SINI           0.95319333463247115507       0.01347651618183712437
+BINARY         DD
+PB             67.825130928948922523     1  0.00000000358822798963
+T0             51997.582586544683057     1  0.00032845811540138436
+A1             32.342422593294597753     1  0.00000002576150823283
+OM             176.21291671696445147     1  0.00174334861009015123
+ECC            7.4933425861009995096e-05 1  0.00000000208902278037
+M2             0.32758413360364681957       0.05828819375961779431
+START          54765.184177370876771     1
+FINISH         55527.207035543524196     1
+TZRMJD         55144.281482027701863
+TZRFRQ         1372.0889999999999418
+TZRSITE        7
+TRES           0.090
+EPHVER         5
+CLK            TT(TAI)
+MODE 1
+EPHEM          DE414
+NITS           1
+NTOA           46
+Pulsar::FITSArchive::load_Predictor try POLYCO
+load_polyco entered
+load_polyco no POLYCO HDU
+Pulsar::FITSArchive::load_Predictor try T2PREDICT
+load_T2Predictor entered
+Tempo2::Predictor::load observing_frequency=1369
+load_text loaded
+ChebyModelSet 43 segments
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54765.16851071261987726757070049644 54765.20184404595320870612340513617
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516257.61719594319765747059136629
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -113614876.6545446908057784 -4.433483506242434183864216e-08
+COEFFS 630147.468673186991509283 2.594909271162274914397065e-07
+COEFFS -0.01014425739322177832946181 -5.637929869705455007678565e-11
+COEFFS -5.700699603039538487792015e-05 2.143699570284182205543508e-13
+COEFFS 4.866439970404220124223608e-06 -1.349758997416143742782533e-08
+COEFFS 5.549736670218408107757568e-08 -9.595199276466964050606962e-10
+COEFFS -1.62602494431970020140629e-08 -3.106220677301302686641603e-10
+COEFFS 9.886510573172320921946515e-09 4.361356775686335635939048e-09
+COEFFS 1.102216629078611731529236e-08 -8.01229151378975083559985e-09
+COEFFS 4.400317266117781400680542e-08 -2.143699570256264859869843e-13
+COEFFS -1.143841169929752747184156e-09 -2.122262574553685071573161e-10
+COEFFS -2.56781428712808216606159e-08 -7.777288448400409696762145e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54783.11180522429981110121843812522 54783.14513855763314253977114276495
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517247.3429201568324060644954443
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -112880048.6738411719270516 -8.582477069770296414908608e-08
+COEFFS 630175.7321645237143457052 3.369112846485222689807415e-07
+COEFFS -0.02042898570349886237276749 2.102540538508661997589566e-09
+COEFFS -7.600439190961575756249781e-05 -3.21983675452484295590418e-10
+COEFFS 4.799228615108101318142039e-06 7.033692659967773522060259e-09
+COEFFS 6.040985075136025746878823e-08 4.479474622007454872754028e-09
+COEFFS -2.349527979580064614697996e-10 1.102097386064439426859288e-08
+COEFFS 4.329801110240320364499564e-09 -1.444853510352710849694537e-10
+COEFFS 5.744974866198996702695364e-09 -4.061024465893435354869609e-09
+COEFFS -1.220435782064062853627299e-08 -3.707528406758180127531636e-10
+COEFFS -3.673145935560266176926854e-09 7.845297317266789150950987e-09
+COEFFS -3.285416975510694707541088e-08 -4.146048950098723771366442e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54812.11389953538018460221792338416 54812.14723286871351604077062802389
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517512.69781209237044095061719418
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -104626932.6680442995202611 -8.758312712113062540474693e-08
+COEFFS 630159.9514675409885171575 3.118282923727141072438892e-07
+COEFFS -0.01705965165062176917312698 7.943478757585335520846614e-09
+COEFFS 0.0001168592092047523086291755 7.09864675694653128154523e-09
+COEFFS 4.682279116726325204112905e-06 6.843760878043070040632394e-09
+COEFFS 1.593040603135402003870199e-08 -2.643395940082978852339948e-09
+COEFFS 2.4352023804870744546793e-08 5.742542408802435930223662e-09
+COEFFS 1.53351417490436385069866e-08 2.419057780055662544679072e-09
+COEFFS 1.676562533248215913772583e-08 3.951267047896315479518551e-09
+COEFFS 1.394422118513224025540446e-08 2.939548035713879449446253e-09
+COEFFS -6.133025938955446084475046e-09 1.734574507272842703717949e-09
+COEFFS -3.131337204346588502435307e-08 -1.099465994841949882719453e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54855.87719984558321328904639813118 54855.91053317891654472759910277091
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14520030.67091235686348227318376303
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -34698312.67432151132743456 -9.460927685722708702087402e-08
+COEFFS 630233.8100527927741154599 3.660171046249161008745432e-07
+COEFFS -0.02300979277439788953965561 2.200614793847670548148958e-09
+COEFFS -0.0001545577248786382066750933 -8.392583817552337732107817e-11
+COEFFS 4.450535395032299371919257e-06 6.843814470532326455870356e-09
+COEFFS 8.109691407298669219017029e-08 4.977027292263929927427831e-09
+COEFFS -2.244936088876177867211549e-10 1.102075949068736864318394e-08
+COEFFS 1.993824601716672380819132e-08 -2.343063630290078578742599e-10
+COEFFS 5.588541777494053045773978e-09 -4.17078188389055522981677e-09
+COEFFS -4.092244883698488895984073e-08 2.027671831016128174668528e-10
+COEFFS -1.498331888190781076803019e-08 7.47797439590338113476955e-09
+COEFFS -6.177723813986328119898314e-09 -4.143436316247473971186646e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54874.85667342547210623138198570814 54874.89000675880543766993469034787
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519683.67742035298761038575321436
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -30821280.67650649382449046 -6.585287337657064199447632e-08
+COEFFS 630209.8518472782373578411 4.02629723339487100020051e-07
+COEFFS -0.02371810451101434106571631 1.946693579750650797931255e-09
+COEFFS -8.146102724519247809825297e-05 9.072565321238495277059778e-09
+COEFFS 4.779338648101353707275015e-06 6.653561133672084483418612e-09
+COEFFS 5.647924202397310485334774e-08 -6.623013414795933207977409e-09
+COEFFS 8.776244915983018775511731e-09 -5.587928077297704076993867e-09
+COEFFS 1.140832258291387309603785e-08 8.680965002241930850311984e-09
+COEFFS -6.053141987649723887443542e-09 -3.621994793904955856494603e-09
+COEFFS -1.13521612850793947773466e-08 -2.190298239664692728993655e-08
+COEFFS 1.451005952427901017196084e-08 8.000460971786399167877535e-09
+COEFFS -2.244959773634036537259817e-08 -1.114397532254900352163334e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54882.79398515971615424291485396679 54882.82731849304948568146755860653
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519733.34886222819386603077873588
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -33288280.66179731975171308 -6.036498234607279300689697e-08
+COEFFS 630209.5388801075797005069 3.192747991912862441105906e-07
+COEFFS -0.01638585800499943919381095 5.432509858454969118017128e-09
+COEFFS -0.0001710727309879681949237395 -1.012238859328222574164059e-08
+COEFFS 4.32363837414110700275622e-06 1.071849785125547490520693e-13
+COEFFS 6.713169871848852684315881e-08 -1.522417920053507524417164e-08
+COEFFS 1.558070531852232913122366e-08 1.133106000348196047507261e-08
+COEFFS 1.248531589226331561803818e-08 -1.967433873091927593918931e-09
+COEFFS -2.235113546097030242337992e-08 -8.12204893178687070812363e-09
+COEFFS 1.91551331833276587222595e-08 4.360901239527656182348963e-09
+COEFFS -1.063422890486738954954242e-08 -5.432697432166523550713389e-09
+COEFFS -3.466230206565038922040085e-08 -4.265412821795054454861103e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54905.84874040110231874223245540634 54905.88207373443565018078516004607
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14520586.29492840138300380203872919
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -22561252.65671889857003407 -1.354395256688197453773649e-07
+COEFFS 630246.3654668668921203789 3.423380121603258885443211e-07
+COEFFS -0.01498721846572455736625024 -5.800154334752015026707705e-09
+COEFFS 9.3897014266985934227705e-05 7.671872022033054919521273e-09
+COEFFS 4.711051133199362084269524e-06 1.900389669032161737710905e-10
+COEFFS 4.54592736787162721157074e-08 1.266937164519293581883708e-08
+COEFFS -8.125349874414193133782397e-09 5.432724228411151755101196e-09
+COEFFS 7.264588930411264300346375e-10 -1.793847800390427948180607e-08
+COEFFS -1.548414729768410325050354e-10 8.012291513789750834792056e-09
+COEFFS 2.60695287579437717795372e-09 2.702642436955935892778306e-09
+COEFFS 2.201867725185972328054669e-09 5.531106640563599415108334e-09
+COEFFS -2.716675832440766195402334e-08 2.994520531568638099651829e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54930.65416644826485281782879610546 54930.68749978159818425638150074519
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519942.30651641817348718177527189
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -30062084.68540577330713859 -1.624393917154520750045776e-07
+COEFFS 630226.140718452962801166 4.614310379717304992092911e-07
+COEFFS -0.02881533101496340047201173 9.678803559708747485980374e-09
+COEFFS -0.0001914153250860787617707659 4.276787827639740477416566e-09
+COEFFS 4.188675802652142010629177e-06 1.330739022979045131848464e-08
+COEFFS 8.303671468941805263575753e-08 -6.559399130048579064170377e-09
+COEFFS -4.435302495645980040148195e-10 -1.071849785128123510568163e-13
+COEFFS 6.901397379503274957204337e-09 -1.676051509004847145601617e-09
+COEFFS 1.055544392632630964093303e-08 -2.195148359942397496292651e-10
+COEFFS -1.730681257564962531075666e-08 1.032510218389458811292121e-08
+COEFFS -4.403697554759370783830161e-09 9.678535597260675647823351e-09
+COEFFS -2.056088040565858439906647e-08 -1.633135313514432774463145e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54945.68299733514268368139710219111 54945.71633066847601511994980683085
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14518981.32898972820294147823005915
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -23619304.68305282416258706 -1.240247608317683140479891e-07
+COEFFS 630193.7367585265519664972 4.816437050673509172025792e-07
+COEFFS -0.02637213461245361637888508 -2.371038909680151057307355e-09
+COEFFS -3.436786596466845367103815e-05 -7.216818195756912405591795e-09
+COEFFS 4.89548218259490871194877e-06 -7.033853437435543319093256e-09
+COEFFS 5.609164569856754193811039e-08 7.173086724523686322646013e-09
+COEFFS -7.686518680808755258988391e-09 5.743239111162769211994901e-09
+COEFFS -2.033592257551693668021967e-08 -4.456376259137943807642918e-09
+COEFFS -5.432260271239404877161508e-09 -1.19635585616860663151184e-08
+COEFFS -3.559534889063797891139984e-09 -3.226910963106729433664924e-09
+COEFFS 1.624065741149631018386076e-08 -8.114090447132294391070284e-09
+COEFFS -2.710956437113054562360048e-08 -3.235023526167917918678019e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54971.64052166096755769331139163114 54971.67385499430088913186409627087
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14518786.04537578047529677860438824
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -19484820.66597225759869616 -2.129187729830543200121115e-08
+COEFFS 630205.8149290312196058039 3.794592278912508239434894e-07
+COEFFS -0.0177078664259321764493923 -5.375809004820256012738278e-09
+COEFFS 2.943194658655556850135326e-05 3.108364376871557714954682e-09
+COEFFS 4.905161101002401361724955e-06 5.703312706666744579751634e-10
+COEFFS 4.140546631485146160034756e-08 1.908937671068560236353386e-09
+COEFFS 7.680152217896344761322986e-09 5.743131926184256398886538e-09
+COEFFS 2.900367235270095989108086e-08 7.583203248558334683858214e-09
+COEFFS -4.652823311820005377217833e-10 -8.012291513789750834792056e-09
+COEFFS 4.720485928070653850698943e-09 -7.503846170091911220732743e-09
+COEFFS 4.846848848198230068057186e-10 5.644762912154122839861613e-09
+COEFFS -1.606899028653666997895429e-08 2.225580854966647743267144e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 54990.63286592376819683636313129682 54990.66619925710152827491583593655
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14518099.89643015081855992320924997
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -14671856.69071322892705211 -1.224883211155732472694548e-07
+COEFFS 630193.183882249026567024 5.103495747486401039037578e-07
+COEFFS -0.0294105016905253554195535 -7.845324113509865335096272e-09
+COEFFS 0.0001301846851144243070589412 2.679624461959115426766321e-14
+COEFFS 4.546515810943674296140671e-06 -7.414038556220488772972865e-09
+COEFFS 4.497375509041982392577748e-08 5.502340871955223368050164e-10
+COEFFS 1.580292519065551459789276e-08 1.148631744485776920331752e-08
+COEFFS 4.136264427264298622699161e-08 -1.107086846814210846195884e-09
+COEFFS 6.053786213063479711746698e-09 -2.008560749347293702647321e-08
+COEFFS 1.072496994917552607781793e-08 -1.339812231410219390348794e-14
+COEFFS -1.921065025574838121785929e-08 -2.102138594837904547272746e-09
+COEFFS 4.188265734228480141609907e-09 -9.966323915036998355291928e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55013.4456981187695028268080932321 55013.47903145210283426536079787184
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516358.2947707029015873558819294
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -22413388.68646880300912017 -1.490492043861498435295256e-07
+COEFFS 630136.8604476104587206464 4.432374491140459819300238e-07
+COEFFS -0.02522166057822990599920942 1.300920161956910923743798e-08
+COEFFS -0.0001510214558493316872045398 1.024114954947443639415878e-08
+COEFFS 4.468548998678064284363168e-06 6.653775503629110006641659e-09
+COEFFS 4.309011577182294179888149e-08 6.621727195053779454312121e-09
+COEFFS 2.162323653465136885643005e-10 -1.552038488865523224732725e-10
+COEFFS 4.31153921454097144305706e-08 -1.611284985738480268856641e-09
+COEFFS -5.43233606246455262091207e-09 1.174404372569182656683967e-08
+COEFFS -1.498509997569878275141905e-08 -4.073967052048857448140364e-09
+COEFFS -1.200502689850206176466848e-08 -3.599405559683380647892689e-09
+COEFFS -9.316911094477594208944787e-09 -1.909841374418646387569249e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55038.34811729783624656420215615071 55038.38145063116957800275486079045
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516232.04870347108135320013388991
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -22901564.66096409086640051 -4.675530362874269485473633e-08
+COEFFS 630149.3546110942461950799 3.087743228509983358370002e-07
+COEFFS -0.01249033627535330500270256 -2.469273942488130057760813e-09
+COEFFS -0.0002139492236589527844185043 1.024109595698517956533051e-08
+COEFFS 4.023064851329157439508813e-06 -6.843814470532327007593362e-09
+COEFFS 7.180028660513926297426224e-08 -7.707296657431543218849782e-09
+COEFFS 6.551393501770993073613041e-10 -1.102065230570885583209506e-08
+COEFFS 1.06869417019576455158701e-08 -1.736932576800124582181227e-10
+COEFFS -1.67634273869528745616894e-08 3.951267047896315481134138e-09
+COEFFS -4.791862314353541781639581e-09 -4.073967052048857448948157e-09
+COEFFS -1.367122119215006629652883e-08 -7.746928303236655590714372e-09
+COEFFS 2.000177801164682023227215e-09 1.303092667490012312165523e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55054.38993081588975186946299800184 55054.42326414922308330801570264157
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516079.27892373108443280216306448
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -15297936.68828490904797945 -1.1217131638356174031678e-07
+COEFFS 630151.4131131319321070805 4.459487475590625157045063e-07
+COEFFS -0.02609175032777481343695925 5.00859326843726473467385e-09
+COEFFS -2.755119904425858597636731e-05 7.217005769469312960851961e-09
+COEFFS 4.905430046164838131517172e-06 2.679624462786296039319349e-14
+COEFFS 5.684754948257856691984753e-08 5.350004221243888799229592e-09
+COEFFS -7.685306021206391354132642e-09 -5.743185518673512804834874e-09
+COEFFS 8.994409957570799936581601e-09 1.460663294683350667057797e-10
+COEFFS -2.235151441709604114294052e-08 8.122048931786870710547011e-09
+COEFFS -7.266104754914219180608267e-09 3.226964555595985840623002e-09
+COEFFS 7.42130623621051199734211e-09 -5.546326907512418773906138e-09
+COEFFS -8.86264691265144695811366e-09 1.029011968653246897211996e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55075.24121148855793705934047466144 55075.27454482189126849789317930117
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515031.65116308494543773122131824
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -20767888.68632228260867123 -1.501472676560903588973848e-07
+COEFFS 630111.123390739003696126 3.853693518370467548655208e-07
+COEFFS -0.02383649153974450503842874 -7.576477391155701081855861e-09
+COEFFS -0.0002227390117089574535643648 -7.182143855208008851497922e-09
+COEFFS 3.926010246383763539156538e-06 7.03385343743554290550295e-09
+COEFFS 8.575223849523657312211236e-08 -7.342760545509468323694848e-09
+COEFFS 7.89934044102362046666051e-09 -5.277466787035343026048498e-09
+COEFFS 4.480170900933444499969482e-09 -1.061024102298329724180208e-09
+COEFFS 5.122577325285722812151437e-09 4.280539301887675103148344e-09
+COEFFS -1.853815471501244852906583e-09 -2.737370369994087103002547e-09
+COEFFS -2.197229302206930393920133e-08 -1.833238279993886495761647e-09
+COEFFS -3.265512305006268434226513e-08 -8.49825480824452805073249e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55095.32396176684766686548755387776 55095.35729510018099830404025851749
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515105.38629874532125541009008884
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -9071992.664539924752716615 -9.548845506894091764870445e-08
+COEFFS 630114.1502988144779351387 2.924786031144321896135807e-07
+COEFFS -0.01283887714911694880991227 -5.800020353529190591992254e-09
+COEFFS 8.310518455800774972885847e-05 8.403302315403924079047888e-11
+COEFFS 4.788480888843575181922537e-06 1.900925593924724511414103e-10
+COEFFS 3.433821878691863578946968e-08 2.382574692994364030862057e-09
+COEFFS -2.208935256930999457836151e-10 -1.133108679972658867946042e-08
+COEFFS -4.596358849084936082363129e-09 -2.844501756017643074162369e-09
+COEFFS 2.21966350485066262389641e-08 -8.231806349783990584686379e-09
+COEFFS 2.673457781080893861696909e-08 -2.028609699578115274346795e-10
+COEFFS 2.74740348989629031462693e-09 5.531113339624756466205286e-09
+COEFFS -3.024110621178503303585867e-08 2.169618237872876992873227e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55115.2400401053595651035266200779 55115.27337343869289654207932471763
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516178.42552939189499738859012723
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -9908620.670053613334857801 -7.375668549987797936019143e-08
+COEFFS 630153.4800628315942390145 3.255590096766051525784794e-07
+COEFFS -0.01701283269384627298317881 1.269871353306161253749516e-08
+COEFFS 1.158934749886005495957776e-05 4.563614830140011965265244e-09
+COEFFS 4.896020641353970859199762e-06 6.653748707384481867685131e-09
+COEFFS 3.72906091191301432737865e-08 5.834265954164775121362607e-09
+COEFFS -1.553720115528752406471061e-12 -3.104344940177328480216875e-10
+COEFFS 3.21632569466601125895977e-08 -3.152819346709747879298292e-09
+COEFFS -5.742966398732581486439233e-09 -3.621994793904955856494603e-09
+COEFFS 7.158083311272397016620164e-09 1.020632782958007789526214e-08
+COEFFS 2.831711753970012068748474e-09 -3.288957667543333698939276e-09
+COEFFS -1.496662112761744841366222e-08 1.221196979798124457705848e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55133.20972831004248249087140720803 55133.24306164337581392942411184777
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516292.89491124761207174742594361
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -7202392.688881014093112753 -1.641966870617276678525774e-07
+COEFFS 630147.1799015364802016848 4.178259397728349237306181e-07
+COEFFS -0.02640575229630333827476917 -1.580415711926639998979369e-08
+COEFFS 5.732258114221622236073017e-05 -1.436439489539455341907131e-08
+COEFFS 4.828539507191938658693212e-06 -2.757268708510092249646098e-25
+COEFFS 5.54902044314076192677021e-08 1.373795228847641881495324e-08
+COEFFS -1.136868377216160297393799e-12 -1.117585615459540815398773e-08
+COEFFS 3.602597568412117349712471e-08 -1.742921537474527968743497e-09
+COEFFS 1.179686629863378281421567e-08 -4.390296719884794984507367e-10
+COEFFS 1.347403137212192329294587e-08 -5.474727341865860105426778e-09
+COEFFS 6.93843086689109137889194e-09 -4.628361256222908319606141e-09
+COEFFS -1.834942509049142245203257e-08 6.828667893256234905112163e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55144.26481536792153903547841764521 55144.29814870125487047403112228494
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516208.20745818746036093216389418
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 31.32582212276520294835791 -1.031719729198410373527395e-07
+COEFFS 630134.9569676460557730024 2.903822936180707377778228e-07
+COEFFS -0.01866057990823340636230042 2.045330556227385446779503e-09
+COEFFS 0.0002397483147025999035836164 3.66738428277453911479074e-09
+COEFFS 3.752065907747237361036241e-06 -6.083377242350865477389114e-09
+COEFFS 1.373836984915518163055574e-08 1.030298355871929571924245e-08
+COEFFS 8.341416446455696132034063e-09 -6.519261705126109349834009e-09
+COEFFS 9.647071882075882361311664e-09 -9.744384018903906227046729e-09
+COEFFS 5.58793544769287109375e-09 4.390296719884794977691608e-09
+COEFFS -6.538733998695533955469728e-10 -6.559361447829570648821772e-09
+COEFFS -1.265906490743873291648924e-09 7.63326114567175195944316e-09
+COEFFS 1.11053276204605329740273e-08 -9.641332779816316492774883e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55202.03345739522390900333448371384 55202.06679072855724044188718835358
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519073.60586225295355689013376832
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS -1213748.681140041975027088 -8.517167771060485392808914e-08
+COEFFS 630206.2442012492584240135 3.913730589980938626987998e-07
+COEFFS -0.02566302273837095526687335 -3.232169726113989840658965e-09
+COEFFS 8.532412903150543570518494e-05 -4.411629933616147599433757e-24
+COEFFS 4.780146952043651253916323e-06 7.604218203408002743918439e-09
+COEFFS 5.171983256483751271648626e-08 -7.651061388548680499270856e-09
+COEFFS 1.580476312786534739091208e-08 6.208823861577797969246139e-10
+COEFFS 4.868878988872893387451768e-08 4.656560954163513547457276e-09
+COEFFS -1.73846596377795018871207e-08 4.829326391873274476268563e-09
+COEFFS -5.418262579344930903499847e-09 3.349530578525683108197341e-15
+COEFFS 1.024801576932077296078205e-09 1.291075891586494634449265e-08
+COEFFS 2.335574104487629180530968e-09 8.561399321328244012921994e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55232.93588770546340427358700253535 55232.96922103879673571213970717508
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519781.41082376866597769549116492
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 75531683.34881866448267829 -6.541813490912318229675293e-08
+COEFFS 630217.2216769523341213244 2.818600061497515222592417e-07
+COEFFS -0.01124009825798566453158855 7.716889713008874956774303e-09
+COEFFS 5.634253617851451660306277e-05 6.895209667729217088547806e-09
+COEFFS 4.83714696504951765153684e-06 6.843975248000095701584244e-09
+COEFFS 4.056619218317791819572449e-08 2.978027442999979091604072e-09
+COEFFS 8.351889846380800008773804e-09 5.898174997603039502530302e-09
+COEFFS 2.90172768776149799431782e-08 -9.934439733460015201024125e-09
+COEFFS -5.589148107295234998201852e-09 3.51223737590783598296108e-09
+COEFFS -8.746080008374216656159411e-09 2.856211714920167826986315e-09
+COEFFS -9.662168546734998623799335e-09 8.864197723009583616975437e-10
+COEFFS -3.599776240055992578359027e-08 9.688584188996251810190414e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55247.78506234296301613539981190115 55247.81839567629634757395251654088
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14520653.48746107503484381595626473
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 68435187.34824389196000993 -4.961232965191205342502971e-08
+COEFFS 630249.4803120249302992306 2.764631593284624007927116e-07
+COEFFS -0.01276173191975734274185278 1.773632713442979130968687e-08
+COEFFS -0.0001947982815787933456445147 -4.444961058926314970403592e-09
+COEFFS 4.196747189174251010158437e-06 -7.223838811849503215355187e-09
+COEFFS 6.158946537955974539336404e-08 9.292937637060833116421369e-09
+COEFFS 4.483808879740536212921143e-10 -1.086512690188676507208899e-08
+COEFFS 5.02606477918258557727776e-08 -1.023734448273722297973062e-08
+COEFFS 1.769391625809172789201925e-08 2.8536928679251167348937e-09
+COEFFS 6.810296326875686645507812e-09 -9.919541021446734278724134e-09
+COEFFS -6.43308339931536465883255e-09 1.183766980442276817904003e-08
+COEFFS -5.737698908584813276792044e-09 2.565472460704164255148236e-10
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55269.79856572540597881015855818987 55269.8318990587393102487112628296
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14520315.20871624947540112771093845
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 75814435.3128292642722954 -1.984468932884434859001009e-07
+COEFFS 630234.1234797515483592178 4.875049057773139793425798e-07
+COEFFS -0.03015659752357654118346019 -5.390546939364260460831249e-09
+COEFFS -2.989000343707933401123197e-05 1.426567753018425226717605e-08
+COEFFS 4.886077931587351486086845e-06 3.79970748827919654921277e-10
+COEFFS 5.535730451811105012893677e-08 1.015834915357328025241453e-08
+COEFFS -8.678095279416690270274288e-10 -1.117607052455243377858887e-08
+COEFFS 3.28770208094889918973885e-08 -2.252170768511213674552211e-09
+COEFFS -1.024576098037262757592296e-08 8.122048931786870709739217e-09
+COEFFS -8.639517545816488564014435e-09 6.859892217309248559853652e-09
+COEFFS -1.68155717498545224462528e-08 4.853067864613862418414266e-09
+COEFFS -3.733763757433431844024281e-08 -1.058591003286088882675259e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55292.77178655269877083355822833255 55292.80511988603210227211093297228
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519489.95094591609995404724031687
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 80342591.3327108084486099 -6.410118658095598220825195e-08
+COEFFS 630205.4519374710407646489 3.923906698825400477809969e-07
+COEFFS -0.01925907603587499276367979 8.057523574723302578501777e-09
+COEFFS 5.681167143241812785356221e-05 -1.100403863403937288970525e-08
+COEFFS 4.858118397047898421547037e-06 7.224053181806528324987928e-09
+COEFFS 3.567007903863365451602559e-08 -5.811569534964687103893246e-09
+COEFFS 2.371886390998649100408743e-08 4.967059089262238379031982e-09
+COEFFS 2.912838681368157267570496e-08 3.14759407900724827247635e-09
+COEFFS 7.138623914215713739395142e-09 -1.16342863076947066918925e-08
+COEFFS -1.536439716195066769971659e-08 -1.358719661619814820737123e-08
+COEFFS -6.429369629283125201726431e-09 2.158919837205066905807742e-09
+COEFFS -9.538932014644766847561847e-09 -6.680303785811031420396273e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55293.64143877384620751058719179127 55293.67477210717953894913989643101
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519518.89542152936519414652138948
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 70768971.34216611320152879 -9.966364207987984021720132e-08
+COEFFS 630206.5082518681253418436 3.084881920282593152089182e-07
+COEFFS -0.01451805288919179777896979 5.278431451842927372378883e-09
+COEFFS -0.0002261045203037307752961327 3.870771129033208117784217e-09
+COEFFS 3.857459129600708062312228e-06 1.071849785125547490520693e-13
+COEFFS 7.967931499782328804549416e-08 -2.245096559929368060897075e-09
+COEFFS -4.29736246587708592414856e-10 -2.2041411796396224475279e-08
+COEFFS 1.844197565029996136770437e-08 7.845833242159353212049939e-09
+COEFFS -1.212659602363904317252921e-12 -8.341563767781110458017953e-09
+COEFFS -4.446595388192993899321084e-09 1.015733089627740853737665e-08
+COEFFS 1.0363085796901335318614e-08 -5.277788341970881463354104e-09
+COEFFS -2.742293266540703674211313e-08 -1.583443687569777249246927e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55309.65357978786294168571657792199 55309.68691312119627312426928256173
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519732.91705043106958328280597925
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 76246659.34087449913931778 -6.805203156545758247375488e-08
+COEFFS 630225.343938880687346682 3.589337325138330925256014e-07
+COEFFS -0.01554936938706911557071827 -8.765587542770690186386129e-10
+COEFFS -0.000112979488524918754897734 -3.191539920197495414777928e-09
+COEFFS 4.691968721696563685795885e-06 -3.215549355387671546539923e-13
+COEFFS 6.743675839970819652080536e-08 -3.859409521310835276941888e-09
+COEFFS 6.596110324608162045478821e-09 -5.277252417078317401447359e-09
+COEFFS 1.818883295830649634256174e-08 6.977849286162598580035313e-09
+COEFFS 1.179553995219369729333018e-08 -7.024474751815671965518264e-09
+COEFFS -8.374778796375418703030597e-09 7.70649277009269712275849e-09
+COEFFS -8.752370680061479409266461e-09 2.023341557884210529356811e-08
+COEFFS -1.144572555252428476982211e-08 9.189209374105058942771855e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55311.73069999707817601120041217655 55311.76403333041150744975311681628
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14519730.92809912310622166842222214
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 82651735.33834444689273369 -1.001026248559355735778809e-07
+COEFFS 630227.1007503295371066088 3.704095850783536055521902e-07
+COEFFS -0.01695861148224745799420433 -5.474365592562223092290083e-09
+COEFFS 7.857362591797330727400427e-05 7.301440736292774557812896e-09
+COEFFS 4.769935609753398845455271e-06 1.33074438222797075963977e-08
+COEFFS 1.886292011477053165435791e-08 -1.428604267610168490953339e-08
+COEFFS -7.891230779932811856269836e-09 6.208904250311682585640734e-09
+COEFFS 5.404353942140005528926849e-08 1.99610585484410490067915e-09
+COEFFS 1.148509909398853778839111e-08 -6.585445079827192472595864e-10
+COEFFS 8.885611653871213396121015e-09 3.024009798781975602879708e-09
+COEFFS 2.517754182917997241020203e-08 6.012112629762159059623063e-09
+COEFFS -5.012831631271789471173758e-09 -1.457608522795735519823708e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55344.54398334998928987715771654621 55344.57731668332262131571042118594
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517965.52445000948773667914792895
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 77929443.29571723806293448 -7.3761232973386844001381e-08
+COEFFS 630176.5717809074661204249 4.952610197506146505475044e-07
+COEFFS -0.03059975901699848085077448 7.633071059813171079302951e-09
+COEFFS -0.0001418488630709665206527304 -7.874451631422266468711298e-09
+COEFFS 4.510226517595583572983742e-06 -6.843868063021583284698625e-09
+COEFFS 5.174130516631218294410328e-08 -1.233774132167429432742203e-08
+COEFFS -8.769802661845460534095764e-09 5.58787448480844767104553e-09
+COEFFS 1.920928601369572182550242e-08 -5.585516415281165799625203e-09
+COEFFS 2.855964946017290155039022e-08 -3.951267047896315482345828e-09
+COEFFS -2.300960962505390246763041e-08 -2.786595071376096185663597e-09
+COEFFS -5.51434216807441165063334e-09 2.045142982513716567165836e-09
+COEFFS -1.41348740119913903372774e-08 5.415547835604473571717021e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55344.59537033899992408692014578264 55344.62870367233325552547285042237
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517949.32496501436071412172168493
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 81815387.29264169831731124 -1.29080338714023431137863e-07
+COEFFS 630176.1827038784203978139 5.360562719639953381243817e-07
+COEFFS -0.03215337396886752685531974 9.679017929666057145339935e-09
+COEFFS -2.468568951978037754639475e-05 4.514631294959658639796385e-09
+COEFFS 4.905972976606183995941061e-06 2.143699570252473615436728e-13
+COEFFS 3.586562039951483408717732e-08 6.912144894334244592126255e-09
+COEFFS 1.669407841594268878354838e-08 -1.077058089261754785018007e-27
+COEFFS 1.807923884674285848989298e-08 -8.4433894973682822170684e-09
+COEFFS -2.2353257615274439254858e-08 -7.902534095792630958229308e-09
+COEFFS 2.58493552488895754026151e-09 1.08987829851397881578939e-08
+COEFFS -5.091957670326034227872366e-09 9.678482004771419241471117e-09
+COEFFS -2.673721155588282272219658e-08 8.952062609145461558730549e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55344.66828595902595111510891001672 55344.70161929235928255366161465645
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517926.60904744445542746689170599
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 87329347.29585329860128695 -1.545437650444606939994661e-07
+COEFFS 630175.6275945051638700534 5.084928034193580970168114e-07
+COEFFS -0.03057101099845264494983511 -6.321555662726267568990926e-09
+COEFFS 0.0001431810890911341023897718 1.134038509661256599170937e-08
+COEFFS 4.537649147096090018749237e-06 3.79863563849406824445352e-10
+COEFFS 1.846668358969812591924479e-08 -3.238486940786113171819976e-09
+COEFFS -8.768590002243096630047809e-09 5.58787448480844767104553e-09
+COEFFS 3.947237322184567650051494e-08 9.46228990311107666360483e-10
+COEFFS -1.086694586168353756241893e-08 -8.12204893178687070812363e-09
+COEFFS -1.657069030140216151819418e-08 1.277548477392062007556487e-08
+COEFFS -2.403764180295790235147665e-08 5.784773290336484008555977e-09
+COEFFS -2.581331652133182311997602e-08 -9.309417327507178020861583e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55364.47593157351518300401949090883 55364.50926490684851444257219554856
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517063.43035020003026147605851293
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 78351171.32205569336656481 -2.89801391772925853729248e-08
+COEFFS 630155.2054067165981905418 3.709961144219657095683877e-07
+COEFFS -0.01646842978273828824417634 8.480475499938478035952167e-10
+COEFFS -0.0001700537456296539555037428 -4.276680642661204761744993e-09
+COEFFS 4.342464762885356321930885e-06 1.071849785125547490520693e-13
+COEFFS 6.389655027305707335472107e-08 -1.856122272906371939644156e-08
+COEFFS 1.493814731171975533113668e-08 6.206010255891836643326958e-10
+COEFFS 6.919738855989029009968632e-10 1.488049056693374235399831e-09
+COEFFS -1.212659602363904317252921e-12 6.573840876841765045275922e-32
+COEFFS 9.776234340582353373099317e-09 -1.032496820267144709663673e-08
+COEFFS -6.188505115763594706987863e-09 2.272321544471622403821035e-10
+COEFFS 1.059747016067073370046521e-08 1.234296658937679392778162e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55385.56112112269099156947049777955 55385.59445445602432300802320241928
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517028.9639176659702570759691298
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 90651851.31645543168269796 -5.663847938800851504115681e-08
+COEFFS 630172.0888286866059502245 3.920958988601341843605042e-07
+COEFFS -0.01970945327987768299313231 2.469756274893347341346554e-09
+COEFFS 0.0001504160397113688911045004 -1.049298065649028982472358e-08
+COEFFS 4.488181427101759860775095e-06 -7.224053181806528876307037e-09
+COEFFS 2.594363953297336896314432e-08 -9.536033168327891593443663e-09
+COEFFS -4.265530151315033435821533e-10 1.148637103734702561209313e-08
+COEFFS 1.803179353980037073240469e-08 1.826324848879810097629113e-09
+COEFFS 4.655097048574437697863107e-09 4.609811555879034726778137e-09
+COEFFS 1.773363086006914575928332e-09 4.682375786332208706366522e-09
+COEFFS 1.940027990106803675425288e-09 7.747062284459796606998852e-09
+COEFFS -4.665897298157991220688348e-09 7.549386387837542380612197e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55405.3694340391593904371347889537 55405.40276737249272187568749359343
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516010.38531428088390384800732136
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 81726915.29312587787717348 -1.576166444768508275306853e-07
+COEFFS 630140.8940589338123459129 4.739824438123226476298507e-07
+COEFFS -0.03013558324134161618171291 -1.858265972476459714814168e-08
+COEFFS -0.000160238203534390777349472 1.745828930016688977312409e-08
+COEFFS 4.430646489102703829744238e-06 7.604131115612961086120415e-09
+COEFFS 4.808119532147732873649974e-08 1.762228231729148294733472e-09
+COEFFS 7.474682206520810723304749e-09 5.898282182581552315234769e-09
+COEFFS 1.933964692094984153852651e-08 -9.074816205787259933300699e-09
+COEFFS 4.965537906779597202802176e-09 3.512237375907835982153287e-09
+COEFFS 1.03508834096525485319605e-08 -8.475652175900638748216557e-10
+COEFFS 1.053202443775565673880671e-08 9.979082277010601552686136e-09
+COEFFS -2.934712028945796191692352e-09 3.436457596099277631932224e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55425.3265039319871227974090288626 55425.35983726532045423596173350234
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515024.46738500552328332560136914
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 83951095.31095311052195029 -8.473580237478017807006836e-08
+COEFFS 630107.5437685567200674086 3.804140457456621030880276e-07
+COEFFS -0.019844876384013332426548 1.063875222726859512845793e-08
+COEFFS -0.0001326046400815054463887621 7.46886367272979756323423e-09
+COEFFS 4.55646901779497663166247e-06 1.368752175608614035753019e-08
+COEFFS 7.035335632584368189391335e-08 3.02904749277207778282402e-09
+COEFFS 9.231371222995221614837646e-09 6.519204763106274417125506e-09
+COEFFS 9.890451716880003611516009e-09 6.062811124598719314143251e-09
+COEFFS -1.117708355498810609154796e-08 -7.463504423804151461671837e-09
+COEFFS -4.380429648639013370012765e-09 2.618636210046519192329091e-09
+COEFFS -3.779784189343142012620444e-09 -1.171344241432641863261074e-08
+COEFFS -2.468789261911297217011452e-08 1.519615032865397490305087e-10
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55444.25520960084083554875178379007 55444.2885429341741669873044884298
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515521.91457529209583299234509468
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 83751471.32976456809410593 -3.512589804207285245151897e-08
+COEFFS 630132.8294032945832441328 2.82918999043128375576264e-07
+COEFFS -0.01119244867368252016603947 1.18267905291043768870536e-08
+COEFFS -0.0001769208338373573496937752 6.489836078993773292299582e-09
+COEFFS 4.303213245293591171503067e-06 3.800779338064323475421811e-10
+COEFFS 7.009642407259282966670235e-08 -5.000715172515261470895339e-09
+COEFFS -7.013113645371049642562866e-09 6.208797065333169773340164e-09
+COEFFS 3.989710724757363398762127e-08 3.66143886599767078325572e-10
+COEFFS -3.116535178075234095171389e-10 -1.558555335559102217302664e-08
+COEFFS -2.699835022212937474250793e-09 2.687984891144308800275055e-09
+COEFFS -1.806491430518993487014582e-08 -1.021446048982473753356609e-08
+COEFFS -3.228126388421515002846718e-08 -4.641297143317173360972151e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55456.31669307929217538344346394297 55456.3500264126255068219961685827
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515844.75277706898850738070905209
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 91714431.3134374764340464 -5.13706860753397146871529e-08
+COEFFS 630146.825957927407500847 3.931911389069379462463919e-07
+COEFFS -0.01988628170450586670445247 8.059024164422776130547582e-09
+COEFFS 3.597251755612281461446462e-05 -7.370896602369083191809495e-09
+COEFFS 4.87640045321313664317131e-06 -6.463468574279612307999866e-09
+COEFFS 4.203411663183942437171936e-08 8.599450826082937035750041e-09
+COEFFS 6.598384061362594366073608e-09 5.898389367560065127535339e-09
+COEFFS 2.754556286769608656632664e-09 1.101818705120306114554689e-08
+COEFFS -5.899892130400985479354858e-09 -4.60981155587903472637424e-09
+COEFFS -4.150630653991053501630301e-09 -4.003573317410567920162871e-09
+COEFFS -1.13770208069278548157823e-09 2.159402169608374561160306e-09
+COEFFS -1.335138222202658653259277e-08 8.457430729553460645002801e-10
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55470.27274977779298481550540600438 55470.30608311112631625405811064411
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515679.7221593318708983133547008
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 92262047.29696113446698291 -6.805445688466231028023521e-08
+COEFFS 630136.2580872864630805452 4.348884393342207962112363e-07
+COEFFS -0.02776150968747970182448626 1.279745769451728436107942e-08
+COEFFS 2.395526795832362646802752e-05 4.108828966310148081074325e-09
+COEFFS 4.896832251688465476036072e-06 -6.463254204322586647048016e-09
+COEFFS 3.847405120419959227351765e-08 -1.250805825253115319379245e-08
+COEFFS -4.259466853303213914319578e-10 -3.101933278160790201687008e-10
+COEFFS 2.505764011099624137029836e-08 2.217657205430088075373324e-10
+COEFFS 1.5830967943960179885767e-08 -1.16342863076947066927003e-08
+COEFFS 1.339609904486375550455953e-08 1.073082412381021116213601e-08
+COEFFS -4.426813878429432710146432e-09 -3.656508356986081442117704e-09
+COEFFS -4.417453662123686323428626e-09 6.860642512158838247674201e-10
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55492.12014045062539935315726324916 55492.15347378395873079170996788889
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515521.33882622926466865465044975
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 86747623.32051893878815463 -6.366462912410497665405273e-08
+COEFFS 630117.654129621200809197 2.883654891168892694102462e-07
+COEFFS -0.01524512451881795035026052 9.791990897016911216488727e-09
+COEFFS -0.0001823041381309546219849993 4.053735887354636485829253e-10
+COEFFS 4.304289177525788545608521e-06 3.807210436775093303977309e-10
+COEFFS 5.146345453492055336742024e-08 1.597827911686196671857949e-08
+COEFFS 1.625630829948931932449341e-08 -3.104076977731046454009289e-10
+COEFFS -1.689159034867770969867706e-08 7.777877965782230166636711e-09
+COEFFS 1.086421737757821877770518e-08 -8.122048931786870709739217e-09
+COEFFS -2.959874715694847206220815e-08 1.681732312866026222396708e-10
+COEFFS -6.616573955398052930831909e-09 1.010261296474661781895977e-08
+COEFFS -1.767311156678867215857694e-08 -6.273242033663998213587328e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55493.18652572732205641159453080036 55493.21985906065538785014723544009
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14515544.65666327394774270942434669
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 92040615.31701874738064362 -4.654187553872664769382854e-08
+COEFFS 630118.2742063948210784474 3.221939361234641789062087e-07
+COEFFS -0.01708669358564899691013651 -7.632642319896857693881525e-09
+COEFFS -2.817793059269509588733823e-05 -1.402858435771390820209997e-08
+COEFFS 4.87586263867948825146876e-06 7.604345485569986608939565e-09
+COEFFS 3.031345841009169816970825e-08 -1.23507107040743446242728e-08
+COEFFS 1.581823501813535889043619e-08 1.117596333957392096507661e-08
+COEFFS 2.934833294906032582177927e-08 1.055450483415663478896028e-09
+COEFFS 1.614140880216533938989828e-08 -1.141477147170046694361377e-08
+COEFFS -3.100922185694798827171326e-09 -6.286077434840907496980894e-09
+COEFFS -1.084716435191997637324428e-08 -2.045142982513716566358042e-09
+COEFFS -2.912391513139785577786205e-09 1.096274562106730894500993e-08
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55508.21516048149742061923461733386 55508.24849381483075205778732197359
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14516543.24107193160580209223553538
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 98331563.33772719058470102 -9.92270846230288346630021e-08
+COEFFS 630150.377918467607457842 2.301571839780081063508987e-07
+COEFFS -0.008164729196929935521418072 -1.044046001701861080790999e-08
+COEFFS 0.0001305191875265639585709166 1.762614097651793652722351e-08
+COEFFS 4.575289797988565017917532e-06 3.80506673720483669445881e-10
+COEFFS 3.046534402528777718544006e-08 -4.420522883825408070686076e-09
+COEFFS 8.794813766144216060638428e-09 -5.587767299829934858744961e-09
+COEFFS 2.052456693490967154502869e-08 -1.231641151095024466224109e-08
+COEFFS -3.119566827081143856048584e-10 -2.195148359942397488845804e-10
+COEFFS 9.487090816643709938000689e-09 -1.252456473922212630322632e-09
+COEFFS 6.159780241432599723339081e-09 1.09791181265351410343223e-08
+COEFFS -2.80028871202375739812851e-08 -9.053968727466517923674275e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55527.14537210277256917834165506065 55527.17870543610590061689435970038
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517829.12426294227316247997805476
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 98374547.32027071720222011 -1.145914817849795023578719e-07
+COEFFS 630188.5874947829615848605 3.099210440874837028397385e-07
+COEFFS -0.01835709978725693266274376 -1.653671285491227577100546e-08
+COEFFS 8.81015275808749720454216e-05 4.920219253652136368802584e-09
+COEFFS 4.75004162581171840429306e-06 -2.757268708510092249646098e-25
+COEFFS 2.148196169097597400293539e-08 8.43610091882941097416731e-09
+COEFFS 4.529283614829182624816895e-10 3.099789578590533954161e-10
+COEFFS 1.229091139975935220718384e-08 -1.122226725029145591830267e-09
+COEFFS -6.223975409132738907963627e-10 -7.902534095792630960652689e-09
+COEFFS -3.502009349176660180091858e-09 1.106674184646936515365178e-08
+COEFFS -1.532309094424514720783422e-08 1.761140304197243251175159e-08
+COEFFS -2.020215106313116848468781e-10 4.811774851641801448822652e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55527.1893688862104596637436770834 55527.22270221954379110229638172314
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14517821.19462812236452009528875351
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 101701699.3246666707491386 -1.07128774592032035194008e-07
+COEFFS 630188.4038589544588830904 2.897953474227203211350504e-07
+COEFFS -0.01619015369396947789937258 -9.668085061854558277438371e-09
+COEFFS 0.0001838145647828544800436091 2.786809441333111506453894e-09
+COEFFS 4.256434597967502971628088e-06 7.604559855527012408024115e-09
+COEFFS 2.428441803203895688056946e-08 1.786323414898828518945278e-08
+COEFFS -7.888350713377197583247174e-09 5.587767299829934858744961e-09
+COEFFS -3.688001015689224004745483e-09 -4.530709041736579192008239e-09
+COEFFS -1.676562533248215913772583e-08 -4.829326391873274474652976e-09
+COEFFS -5.389665602706372737884521e-09 -7.874880371336325366910862e-09
+COEFFS -2.909852507097336153256657e-09 1.827123376969730550581022e-08
+COEFFS -3.167231928576560070009609e-08 -4.820108483721172609937735e-09
+ChebyModel END
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME PARKES
+TIME_RANGE 55091.85918365788030470753255940508 55091.89251699121363614608526404481
+FREQ_RANGE 1497 1241
+DISPERSION_CONSTANT -14514980.3440704630584150436334312
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 30307690.43588621336493816 1.863663783296942710876465e-07
+COEFFS 630108.7897804275938256069 -4.221930870092667949782547e-07
+COEFFS 0.0257539706835056373766254 1.505461256452618005502261e-08
+COEFFS -0.0001375263542134537904789638 -8.419380062180752146242199e-11
+COEFFS -4.556731407016438121459109e-06 -1.34974827891829240456264e-08
+COEFFS 4.736853043141309171915054e-08 -7.226572028801579705462845e-09
+COEFFS 2.237356966361403465270996e-10 1.102065230570885583128727e-08
+COEFFS 1.250941750186029821634293e-08 -9.952821957274962522486787e-09
+COEFFS 1.102019571893227597050761e-08 -8.231806349783990584686379e-09
+COEFFS -5.062778048644152780508523e-09 2.027939793462410183458065e-10
+COEFFS 6.974876972284012784695154e-09 4.033799481351181010330061e-09
+COEFFS -2.276404605557521184339335e-08 2.632275498562274568582775e-09
+ChebyModel END
+FITSArchive::load_integration_state nsubint=1
+psrfits_read_key: INT_TYPE=TIME
+FITSArchive::load_integration_state INT_TYPE=TIME
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+FITSArchive::load_integration_state version=4.9 load SUBINT state
+psrfits_read_key: SCALE=Jansky
+psrfits_read_key: POL_TYPE=INTEN
+psrfits_read_key: NCHAN=1
+psrfits_read_key: CHAN_BW=-256
+psrfits_read_key: DM=15.9915
+psrfits_read_key: RM=0
+NAUX: keyword not found in header
+psrfits_read_key: using default=0
+FITSArchive::interpret_scale SCALE=Jansky
+FITSArchive::interpret_pol_type POL_TYPE=INTEN
+FITSArchive::interpret_pol_type Signal::Intensity
+FITSArchive::load_header exit
+Pulsar::Archive::correct 3 entries
+Pulsar::Archive::correct testing CalSource
+Pulsar::Archive::correct applying CalSource
+Pulsar::CalSource::apply
+Pulsar::Archive::correct testing Dedispersed
+Pulsar::Archive::correct testing DeFaradayed
+Pulsar::IntegrationManager::get_Integration subint=0
+Pulsar::IntegrationManager::get_Integration load
+Pulsar::Archive::load_Integration
+Pulsar::Integration ctor this=0x180d9b0
+Pulsar::Archive::init_Integration check_phase=0
+Pulsar::Integration::add_extension appending
+FITSArchive::load_Integration number 0
+psrfits_read_key: EPOCHS=VALID
+FITSArchive::load_Integration epochs are VALID
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+Pulsar::Archive::get<Ext> name=AuxColdPlasma
+Pulsar::Archive::get<Ext> name=DigitiserCounts
+Pulsar::Archive::get<Ext> name=Passband
+Pulsar::Archive::get<Ext> name=FITSSUBHdrExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar16IntegrationOrderE
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::FITSArchive::load_Integration header epoch=54765.1629629988323
+  offset=2.8228e+07s epoch=55091.8758502795122
+Pulsar::FITSArchive::load_Integration folding_period = 0.00457064
+FITSArchive::load_Pointing
+Pulsar::FITSArchive::load_Pointing RA_SUB in degrees
+Pulsar::FITSArchive::load_Pointing DEC_SUB in degrees
+Pulsar::Integration::add_extension appending
+FITSArchive::load_AuxColdPlasmaMeasures
+psrfits_read_col: AUX_DM=0
+psrfits_read_col: AUX_RM=0
+Integration::resize npol=1 nchan=1 nbin=1024
+ old npol=0 nchan=0 nbin=0
+Pulsar::FITSArchive::load_Integration reading channel freqs
+Pulsar::FITSArchive::load_Integration setting frequencies
+Pulsar::FITSArchive::load_Integration reading weights
+Pulsar::FITSArchive::load_Integration setting weights
+FITSArchive::load_Integration dat_io=0x180db80
+Pulsar::ProfileColumn::load_amps<> reading offsets
+Pulsar::ProfileColumn::load_amps<> reading scales
+Pulsar::ProfileColumn::load_amps<> ipol scaled
+Pulsar::ProfileColumn::load_amps<> reading data
+FITSArchive::loadSpectralKurtosis entered
+Pulsar::FITSArchive::load_SpectralKurtosis no SPECKURT HDU
+Pulsar::FITSArchive::load_Integration load complete
+Pulsar::Archive::init_Integration check_phase=1
+Pulsar::Integration::add_extension replacing
+Tempo2::Predictor::phase epoch=55091.9 frequency=1369
+Pulsar::Archive::init_Integration epoch=55091.87585027951219274200 fturn=1
+Pulsar::Archive::init_Integration frac=3.71777e-07 aligned=0
+Pulsar::FrequencyIntegrate::transform nothing to do
+Pulsar::IntegrationManager::get_Integration subint=0
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+Pulsar::Archive::get<Ext> name=AuxColdPlasma
+Pulsar::Archive::get<Ext> name=DigitiserCounts
+Pulsar::Archive::get<Ext> name=Passband
+Pulsar::Archive::get<Ext> name=FITSSUBHdrExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar16IntegrationOrderE
+Pulsar::Integrate::Divided::divide into 1 ranges with 1 elements per range
+Pulsar::TimeIntegrate::transform nothing to do
+Pulsar::IntegrationManager::get_Integration subint=0
+Integration::pscrunch Total Intensity
+Integration::resize npol=1 nchan=1 nbin=1024
+ old npol=1 nchan=1 nbin=1024
+Pulsar::IntegrationManager::get_Integration const
+Pulsar::IntegrationManager::get_Integration subint=0
+FORMAT 1
+CommandParser::add_command "report"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "clobber"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "load"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "unload"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "push"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "pop"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "set"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "get"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "remove"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "clone"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "convert"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "extract"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "append"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "edit"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "test"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "config"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "fscrunch"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "tscrunch"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "pscrunch"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "bscrunch"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "fold"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "state"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "invint"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "centre"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "dedisperse"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "defaraday"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "weight"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "scale"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "offset"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "rotate"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "fix"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "spc"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "baseline"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "mean"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "median"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "sinc"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "cumulative"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "difference"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "subtract"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "convolve"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "correlate"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "median"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "mow"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "chan"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "subint"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "such"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "edge"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "freq"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "zerodm"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "type"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "load"
+CommandParser::add_command new Command<P>
+CommandParser::add_command ""
+CommandParser::add_command new Command<P>
+CommandParser::add_command "frontend"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "flux"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "par"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "pred"
+CommandParser::add_command new Command<P>
+CommandParser::add_command "rcvr"
+CommandParser::add_command new Command<P>
+Loading t110205_210820.pFT
+Pulsar::Archive::load with 9 Agents
+Pulsar::Archive::load testing Timer
+Timer::load convert endian
+Timer::load not a timer header
+  Timer::is_timer invalid MJD=544109933
+Pulsar::TimerArchive::Agent::advocate fail Timer::fload
+Pulsar::Archive::load testing Baseband
+Timer::load convert endian
+Timer::load not a timer header
+  Timer::is_timer invalid MJD=544109933
+Pulsar::Archive::load testing EPN
+Pulsar::Archive::load testing ASP
+IntegrationManager null constructor
+Pulsar::Archive ctor this=0x7fff1a156120 instances=2
+Pulsar::Archive::init
+Pulsar::BasicArchive dtor this=0x7fff1a156120
+Pulsar::Archive dtor this=0x7fff1a156120 instances=1
+Pulsar::IntegrationManager dtor this=0x7fff1a156120
+ASP load failed due to: 
+Error::stack
+	Pulsar::ASPArchive::load_header
+Error::InvalidState
+Error::message
+	Unrecognized HDRVER=5.3 in file t110205_210820.pFT
+
+Pulsar::Archive::load testing PSRFITS
+Pulsar::FITSArchive::Agent::advocate test t110205_210820.pFT
+FITSAgent::advocate test reading MJD
+Pulsar::Archive::load using PSRFITS
+IntegrationManager null constructor
+Pulsar::Archive ctor this=0x1829bf0 instances=2
+Pulsar::Archive::init
+FITSArchive default construct
+Pulsar::Archive::add_extension appending FITSHdrExtension
+FITSArchive::load_header fits_open_file (t110205_210820.pFT)
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar12ObsExtensionE
+Pulsar::Archive::add_extension appending ObsExtension
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+FITSArchive::load_header reading FITS header version
+psrfits_read_key: HDRVER=5.3
+Got: Version 5.3
+FITSArchive::load_header reading file creation date
+psrfits_read_key: DATE=2013-12-19T03:48:45
+FITSArchive::load_header reading observer name
+psrfits_read_key: OBSERVER=SO
+Got observer: SO
+FITSArchive::load_header reading project ID
+psrfits_read_key: PROJID=P456
+Got PID: P456
+FITSArchive::load_header reading telescope name
+psrfits_read_key: TELESCOP=PARKES
+FITSArchive::load_header TELESCOP=PARKES
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar9TelescopeE
+Pulsar::Archive::add_extension appending Telescope
+psrfits_read_key: RA=17:13:49.530
+psrfits_read_key: DEC=+07:47:37.500
+FITSArchive::load_ITRFExtension
+Pulsar::Archive::add_extension appending ITRFExtension
+FITSArchive::load_Receiver
+FITSArchive::load_Receiver reading receiver
+psrfits_read_key: FRONTEND=MULTI
+psrfits_read_key: NRCVR=2
+FITSArchive::load_Receiver reading feed polarization
+psrfits_read_key: FD_POLN=LIN
+FITSArchive::load_Receiver reading XPOL_ANG
+XPOL_ANG: keyword not found in header
+psrfits_read_key: using default=0
+FITSArchive::load_Receiver reading YPOL_ANG
+YPOL_ANG: keyword not found in header
+psrfits_read_key: using default=90
+FITSArchive::load_Receiver reading CAL_ANG
+CAL_ANG: keyword not found in header
+psrfits_read_key: using default=45
+FITSArchive::load_Receiver reading FD_SANG
+FITSArchive::load_Receiver reading FD_HAND
+FITSArchive::load_Receiver reading FD_XYPH
+FITSArchive::load_Receiver reading feed track mode
+psrfits_read_key: FD_MODE=FA
+FITSArchive::load_Receiver reading requested feed angle
+FITSArchive::load_Receiver reading attenuator settings
+FITSArchive::load_Receiver WARNING: fits_read_key ATTEN_A,B: keyword not found in header
+Pulsar::Archive::add_extension appending Receiver
+FITSArchive::load_WidebandCorrelator
+psrfits_read_key: BACKEND=PDFB4
+FITSArchive::load_WidebandCorrelator BACKEND=PDFB4
+psrfits_read_key: BECONFIG=pdfb4_1024_256_1024
+FITSArchive::load_WidebandCorrelator BECONFIG=pdfb4_1024_256_1024
+psrfits_read_key: BE_PHASE=-1
+FITSArchive::load_WidebandCorrelator BE_PHASE=-1
+psrfits_read_key: BE_DCC=1
+FITSArchive::load_WidebandCorrelator BE_DCC=1
+FITSArchive::load_WidebandCorrelator reading cycle time
+psrfits_read_key: TCYCLE=10
+FITSArchive::load_WidebandCorrelator reading NRCVR
+psrfits_read_key: NRCVR=2
+FITSArchive::load_WidebandCorrelator reading BE_DELAY
+psrfits_read_key: BE_DELAY=0
+Pulsar::Archive::add_extension appending WidebandCorrelator
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+FITSArchive::load_header reading OBS_MODE
+FITSArchive::load_header OBS_MODE='PSR'
+FITSArchive::load_header using Signal::Pulsar
+psrfits_read_key: OBSFREQ=1369
+psrfits_read_key: OBSBW=256
+psrfits_read_key: OBSNCHAN=1024
+CHAN_DM: bad string to double convert
+psrfits_read_key: using default=-1
+FITSArchive::load_header reading source name
+FITSArchive::load_header reading coordinates
+psrfits_read_key: COORD_MD=J2000
+Got coordinate type: J2000
+FITSArchive::load_header reading equinox
+psrfits_read_key: EQUINOX=2000.0
+Got equinox: 2000.0
+psrfits_read_key: RA=17:13:49.530
+psrfits_read_key: STT_CRD1=17:13:49.530
+psrfits_read_key: DEC=+07:47:37.500
+psrfits_read_key: STT_CRD2=+07:47:37.500
+psrfits_read_key: STP_CRD1=17:13:49.530
+psrfits_read_key: STP_CRD2=+07:47:37.500
+FITSArchive::load_header reading track mode
+psrfits_read_key: TRK_MODE=TRACK
+FITSArchive::load_header reading observation date
+psrfits_read_key: DATE-OBS=2011-02-05T21:08:20
+FITSArchive::load_header DATE-0BS parsed into
+ date='2011-02-05'
+ time='21:08:20'
+FITSArchive::load_header reading BPA
+psrfits_read_key: BPA=0.
+FITSArchive::load_header reading BMAJ
+psrfits_read_key: BMAJ=0.248356464572681
+FITSArchive::load_header reading BMIN
+psrfits_read_key: BMIN=0.248356464572681
+FITSArchive::load_header reading MJDs
+psrfits_read_key: STT_IMJD=55597
+psrfits_read_key: STT_SMJD=76110
+psrfits_read_key: STT_OFFS=0.00234172
+FITSArchive::load_header MJD=55597:210830.002341718750000
+FITSArchive::load_header reading start LST
+psrfits_read_key: STT_LST=57852.8
+FITSArchive::load_header reading IBEAM
+psrfits_read_key: IBEAM=
+FITSArchive::load_header IBEAM=''
+FITSArchive::load_header reading PNT_ID
+psrfits_read_key: PNT_ID=
+FITSArchive::load_header PNT_ID=''
+FITSArchive::load_header finished with primary HDU
+FITSArchive::load_ProcHistory entered
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=2011-02-05T21:08:20
+load ProcHistory::row DATE_PRO=2011-02-05T21:08:20
+psrfits_read_col: PROC_CMD=PDFB4:2010-09-24_18:58
+load ProcHistory::row PROC_CMD=PDFB4:2010-09-24_18:58
+psrfits_read_col: NSUB=64
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46255e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=NONE
+psrfits_read_col: SC_MTHD= 
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Wed Sep 11 11:23:02 2013
+load ProcHistory::row DATE_PRO=Wed Sep 11 11:23:02 2013
+psrfits_read_col: PROC_CMD=paz -E 5 -r -e zap
+load ProcHistory::row PROC_CMD=paz -E 5 -r -e zap
+psrfits_read_col: NSUB=64
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46255e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=0
+psrfits_read_col: FD_CORR=0
+psrfits_read_col: BE_CORR=0
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=NONE
+psrfits_read_col: CAL_FILE=NONE
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=FluxDen
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Wed Sep 11 11:26:38 2013
+load ProcHistory::row DATE_PRO=Wed Sep 11 11:26:38 2013
+psrfits_read_col: PROC_CMD=pac  -u zcfT -u fluxcal -u avpcm -e pcm -S -T
+load ProcHistory::row PROC_CMD=pac  -u zcfT -u fluxcal -u avpcm -e pcm -S -T
+psrfits_read_col: NSUB=64
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46255e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=ovhb04
+psrfits_read_col: CAL_FILE=pdfb_20cm_2.avpcm t110205_210415
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Wed Sep 11 11:27:21 2013
+load ProcHistory::row DATE_PRO=Wed Sep 11 11:27:21 2013
+psrfits_read_col: PROC_CMD=pam -F -p
+load ProcHistory::row PROC_CMD=pam -F -p
+psrfits_read_col: NSUB=64
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46255e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=ovhb04
+psrfits_read_col: CAL_FILE=pdfb_20cm_2.avpcm t110205_210415
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+load ProcHistory::row entered
+psrfits_read_col: DATE_PRO=Thu Dec 19 14:48:45 2013
+load ProcHistory::row DATE_PRO=Thu Dec 19 14:48:45 2013
+psrfits_read_col: PROC_CMD=pam -T
+load ProcHistory::row PROC_CMD=pam -T
+psrfits_read_col: NSUB=1
+psrfits_read_col: NBIN_PRD=1024
+psrfits_read_col: TBIN=4.46255e-06
+psrfits_read_col: DM=0
+psrfits_read_col: RM=0
+psrfits_read_col: PR_CORR=1
+psrfits_read_col: FD_CORR=1
+psrfits_read_col: BE_CORR=1
+psrfits_read_col: RM_CORR=0
+psrfits_read_col: DEDISP=0
+psrfits_read_col: DDS_MTHD=UNSET
+psrfits_read_col: SC_MTHD=NONE
+psrfits_read_col: CAL_MTHD=ovhb04
+psrfits_read_col: CAL_FILE=pdfb_20cm_2.avpcm t110205_210415
+psrfits_read_col: RFI_MTHD= 
+psrfits_read_col: RM_MODEL=NONE
+psrfits_read_col: AUX_RM_C=0
+psrfits_read_col: DM_MODEL=NONE
+psrfits_read_col: AUX_DM_C=0
+psrfits_read_col: SCALE=Jansky
+load ProcHistory::row exiting
+FITSArchive::load_ProcHistory calibrated
+Pulsar::Archive::add_extension appending ProcHistory
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar13AuxColdPlasmaE
+Pulsar::Archive::add_extension appending AuxColdPlasma
+FITSArchive::load_ProcHistory exiting
+FITSArchive::load_digistat entered
+Pulsar::Archive::add_extension appending DigitiserStatistics
+FITSArchive::load_digistat exiting
+Pulsar::Archive::add_extension appending DigitiserCounts
+FITSArchive::load_Passband entered
+FITSArchive::load_Passband BANDPASS HDU found
+FITSArchive::load_Passband BANDPASS NCH_ORIG=1025 BP_NPOL=2
+FITSArchive::load_Passband offsets read
+FITSArchive::load_Passband scale factors read
+FITSArchive::load_Passband data read
+Pulsar::Archive::add_extension appending Passband
+FITSArchive::load_Passband exiting
+FITSArchive::load_CoherentDedispersion entered
+FITSArchive::load_FluxCalibratorExtension entered
+Pulsar::FITSArchive::load_FluxCalibratorExtension no FLUX_CAL HDU
+FITSArchive::load_CalibratorStokes entered
+Pulsar::FITSArchive::load_CalibratorStokes no CAL_POLN HDU
+FITSArchive::load_PolnCalibratorExtension entered
+Pulsar::FITSArchive::load_PolnCalibratorExtension no FEEDPAR HDU
+FITSArchive::load_FITSSUBHdrExtension entered
+psrfits_read_key: INT_UNIT=SEC
+psrfits_read_key: INT_TYPE=TIME
+psrfits_read_key: NBITS=1
+NCH_STRT: keyword not found in header
+psrfits_read_key: using default=-1
+psrfits_read_key: NSBLK=1
+ZERO_OFF: bad string to double convert
+psrfits_read_key: using default=0
+psrfits_read_key: SIGNINT=0
+Pulsar::Archive::add_extension appending FITSSUBHdrExtension
+Pulsar::FITSArchive::load_Parameters try PSRPARAM
+load_TextParameters entered
+load_text loaded
+PSRJ           	J1713+0747
+RAJ            	17:13:49.5317095         1.000e-07
+DECJ           	+07:47:37.51220          1.000e-05
+DM             	15.987                   6.000e-04
+PEPOCH         	53300
+F0             	218.81184386986751882    1.000e-17
+F1             	-4.0849921094051e-16     1.000e-29
+PMRA           	4.9260000000000000002    4.000e-03
+PMDEC          	-3.7                     1.000e-02
+POSEPOCH       	53300
+BINARY         	DD
+PB             	67.825129881570710572    1.000e-18
+ECC            	7.491687986318585e-05    1.000e-20
+A1             	32.342425936271893321    1.000e-18
+T0             	53286.245122185696868    1.000e-15
+OM             	176.1343899775267641     1.000e-16
+START          	52649.043011289057379
+FINISH         	54139.030459217366822
+CLK            	UTC(NIST)
+EPHEM          	DE405
+TZRMJD         	53303.171990698572607
+TZRFRQ         	3093
+TZRSITE        	7
+PX             	1.07                     6.000e-02
+EPHVER         	2
+Pulsar::FITSArchive::load_Predictor try POLYCO
+load_polyco entered
+load_polyco no POLYCO HDU
+Pulsar::FITSArchive::load_Predictor try T2PREDICT
+load_T2Predictor entered
+Tempo2::Predictor::load observing_frequency=1369
+load_text loaded
+ChebyModelSet 1 segments
+ChebyModel BEGIN
+PSRNAME J1713+0747
+SITENAME 7
+TIME_RANGE 55597.87686342590313870459794998169 55598.37686342590313870459794998169
+FREQ_RANGE 1241 1497
+DISPERSION_CONSTANT -14517806.03472353422966989455744624
+NCOEFF_TIME 12
+NCOEFF_FREQ 2
+COEFFS 173547706952.8714054077864 4.127610902596330403899665e-06
+COEFFS 9453662.285064033821981866 -1.396355312158575453620443e-06
+COEFFS -1.667673804843430980949376 1.784794324660236574212675e-06
+COEFFS 1.013045638842035199404801 1.693559316674390755956064e-07
+COEFFS 0.0704076075577077320158002 -1.012619108600222110902709e-07
+COEFFS -0.03337297225682531915150978 -5.626082029686412208178904e-09
+COEFFS -0.001509178262395400706851323 2.19112211627870864581417e-09
+COEFFS 0.0005059584445821808641005075 9.084868180547200460818832e-11
+COEFFS 1.705178940905734348969808e-05 -2.542778898450091329794101e-11
+COEFFS -4.427324157311051286708595e-06 -2.053589320457593915249156e-12
+COEFFS -1.190177910600462221622977e-07 1.316467484370909588732224e-12
+COEFFS 2.531933265771348274799548e-08 -8.533914629372452784773159e-13
+ChebyModel END
+FITSArchive::load_integration_state nsubint=1
+psrfits_read_key: INT_TYPE=TIME
+FITSArchive::load_integration_state INT_TYPE=TIME
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+FITSArchive::load_integration_state version=5.3 load SUBINT state
+psrfits_read_key: SCALE=Jansky
+psrfits_read_key: POL_TYPE=INTEN
+psrfits_read_key: NCHAN=1
+psrfits_read_key: CHAN_BW=-256
+psrfits_read_key: DM=15.987
+psrfits_read_key: RM=0
+NAUX: keyword not found in header
+psrfits_read_key: using default=0
+FITSArchive::interpret_scale SCALE=Jansky
+FITSArchive::interpret_pol_type POL_TYPE=INTEN
+FITSArchive::interpret_pol_type Signal::Intensity
+FITSArchive::load_header exit
+Pulsar::Archive::correct 3 entries
+Pulsar::Archive::correct testing CalSource
+Pulsar::Archive::correct applying CalSource
+Pulsar::CalSource::apply
+Pulsar::Archive::correct testing Dedispersed
+Pulsar::Archive::correct testing DeFaradayed
+Pulsar::IntegrationManager::get_Integration subint=0
+Pulsar::IntegrationManager::get_Integration load
+Pulsar::Archive::load_Integration
+Pulsar::Integration ctor this=0x1849b40
+Pulsar::Archive::init_Integration check_phase=0
+FITSArchive::load_Integration number 0
+psrfits_read_key: EPOCHS=VALID
+FITSArchive::load_Integration epochs are VALID
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+Pulsar::Archive::get<Ext> name=AuxColdPlasma
+Pulsar::Archive::get<Ext> name=DigitiserStatistics
+Pulsar::Archive::get<Ext> name=DigitiserCounts
+Pulsar::Archive::get<Ext> name=Passband
+Pulsar::Archive::get<Ext> name=FITSSUBHdrExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar16IntegrationOrderE
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::FITSArchive::load_Integration header epoch=55597.8809028048810
+  offset=1922.13s epoch=55597.9031497089156
+Pulsar::FITSArchive::load_Integration folding_period = 0.00456965
+FITSArchive::load_Pointing
+Pulsar::FITSArchive::load_Pointing RA_SUB in degrees
+Pulsar::FITSArchive::load_Pointing DEC_SUB in degrees
+Pulsar::Integration::add_extension appending
+FITSArchive::load_AuxColdPlasmaMeasures
+psrfits_read_col: AUX_DM=0
+psrfits_read_col: AUX_RM=0
+Integration::resize npol=1 nchan=1 nbin=1024
+ old npol=0 nchan=0 nbin=0
+Pulsar::FITSArchive::load_Integration reading channel freqs
+Pulsar::FITSArchive::load_Integration setting frequencies
+Pulsar::FITSArchive::load_Integration reading weights
+Pulsar::FITSArchive::load_Integration setting weights
+FITSArchive::load_Integration dat_io=0x184a820
+Pulsar::ProfileColumn::load_amps<> reading offsets
+Pulsar::ProfileColumn::load_amps<> reading scales
+Pulsar::ProfileColumn::load_amps<> ipol scaled
+Pulsar::ProfileColumn::load_amps<> reading data
+FITSArchive::loadSpectralKurtosis entered
+Pulsar::FITSArchive::load_SpectralKurtosis no SPECKURT HDU
+Pulsar::FITSArchive::load_Integration load complete
+Pulsar::Archive::init_Integration check_phase=1
+Tempo2::Predictor::phase epoch=55597.9 frequency=1369
+Pulsar::Archive::init_Integration epoch=55597.90314970891561918709 fturn=2.71946e-07
+Pulsar::Archive::init_Integration frac=2.71946e-07 aligned=0
+Integration::pscrunch Total Intensity
+Integration::resize npol=1 nchan=1 nbin=1024
+ old npol=1 nchan=1 nbin=1024
+pat: calling ArrivalTime::set_observation
+pat: calling ArrivalTime::get_toas
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::Archive::get<Ext> name=ProcHistory
+Pulsar::Archive::get<Ext> name=AuxColdPlasma
+Pulsar::Archive::get<Ext> name=DigitiserStatistics
+Pulsar::Archive::get<Ext> name=DigitiserCounts
+Pulsar::Archive::get<Ext> name=Passband
+Pulsar::Archive::get<Ext> name=FITSSUBHdrExtension
+Pulsar::Archive::get<Ext> failed to find extension type=PKN6Pulsar16IntegrationOrderE
+Pulsar::Archive::get<Ext> name=FITSHdrExtension
+Pulsar::Archive::get<Ext> name=ObsExtension
+Pulsar::Archive::get<Ext> name=Telescope
+Pulsar::Archive::get<Ext> name=ITRFExtension
+Pulsar::Archive::get<Ext> name=Receiver
+Pulsar::Archive::get<Ext> name=WidebandCorrelator
+Pulsar::IntegrationManager::get_Integration const
+Pulsar::IntegrationManager::get_Integration subint=0
+Pulsar::Profile::sum
+Pulsar::Profile::sum
+Profile::PhaseGradShift compare nbin=1024 1024
+xcorr_shift=0.0376902520656586
+model profile: best tau is -0.0390935597538718
+Profile::fftconv shift=-6.37125967655636 bins, error=0.0071431927156796 scale=1.87075244773045 error=0.000822833093181296 chisq=4363426.00176019
+pat: got 1 TOAs
+t110205_210820.pFT 1368.830 55597.903149708586544   0.032  pks 
+Pulsar::FITSArchive dtor this=0x17ead20
+Pulsar::BasicArchive dtor this=0x17ead20
+Pulsar::Archive dtor this=0x17ead20 instances=1
+Pulsar::IntegrationManager dtor this=0x17ead20
+Pulsar::Integration dtor this=0x180d9b0
+Pulsar::FITSArchive dtor this=0x1829bf0
+Pulsar::BasicArchive dtor this=0x1829bf0
+Pulsar::Archive dtor this=0x1829bf0 instances=0
+Pulsar::IntegrationManager dtor this=0x1829bf0
+Pulsar::Integration dtor this=0x1849b40
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent
+Pulsar::Archive::Agent::~Agent

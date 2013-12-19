@@ -2,8 +2,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-#include <gsl/gsl_rng.h>
-#include <gsl/gsl_randist.h>
+//#include <gsl/gsl_rng.h>
+//#include <gsl/gsl_randist.h>
 #include <fftw3.h>
 #include "fitsio.h"
 
@@ -27,7 +27,7 @@ int readfile ( char *filename, int *ntxt, double *x, double *y );
 
 int dft_profiles (int N, double *in, fftw_complex *out);
 
-int simulate (int n, double SNR, double *s, double *p);
+//int simulate (int n, double SNR, double *s, double *p);
 
 double find_peak_value (int n, double *s);
 

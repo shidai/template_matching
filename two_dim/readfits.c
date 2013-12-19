@@ -79,7 +79,7 @@ double stt_offs ( char *name )
         printf( "error while openning file\n" );
     }
 
-	double stt_offs;
+    double stt_offs;
     if ( fits_read_key(fptr, TDOUBLE, (char *)"STT_OFFS", &stt_offs, NULL, &status) )           // get the row number
     {
         printf( "error while getting the npol number\n" );
@@ -351,7 +351,7 @@ double read_offs ( char *name, int subint)
     int null = 0;
     int	anynull = 0;
 
-	double offs;
+    double offs;
 
 	//int i;
     //for (i = 1; i <= nrows; i++)                             // print the results
