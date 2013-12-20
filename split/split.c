@@ -25,7 +25,7 @@ int main (int argc, char *argv[])
 
 	read_prof(argv[1], nchan, p);
 
-	/*
+        /*
 	int i;
 	for (i = 0; i < 1024; i++)
 	{
@@ -65,6 +65,14 @@ int create (char *name_old, char *name_new )
         printf( "error while creating file\n" );
     }
 
+    fitsfile *fptr_e;       // pointer to the FITS file, defined in fitsio.h 
+
+	// create an empty file
+	if ( fits_create_file(&fptr_e, "!empty(psrheader)", &status) )
+    {
+        printf( "error while creating file\n" );
+    }
+
 	// copy old file to new file
 	if ( fits_copy_file(fptr_old, fptr_new, 0, 1, 1, &status) )
     {
@@ -78,6 +86,12 @@ int create (char *name_old, char *name_new )
 	{
         printf( "error while moving in file\n" );
 	}
+
+	// move the SUBINT extension
+	if ( fits_movabs_hdu(fptr_e, 6, NULL, &status) )
+	{
+        printf( "error while moving in file\n" );
+	}
 	
 	int colnum;
 	if ( fits_get_colnum(fptr_new, CASEINSEN, "DATA", &colnum, &status) )
@@ -87,6 +101,7 @@ int create (char *name_old, char *name_new )
 
 	//printf ("colnum number %d\n", colnum);
 
+        /*
 	// delete the DATA colnum
 	if ( fits_delete_col(fptr_new, colnum, &status) )
 	{
@@ -95,10 +110,17 @@ int create (char *name_old, char *name_new )
 
 	// insert a new empty DATA colnum
 	char name[] = "DATA";
-	char form[] = "1024E";
+	char form[] = "1024I";
 	if ( fits_insert_col(fptr_new, colnum, name, form, &status) )
 	{
         printf( "error while inserting colnums in file\n" );
+	}
+	*/
+
+	// copy the new empty DATA colnum
+	if ( fits_copy_col(fptr_e, fptr_new, colnum, colnum, 0, &status) )
+	{
+        printf( "error while copying colnums in file\n" );
 	}
 
 	// close files
@@ -108,6 +130,11 @@ int create (char *name_old, char *name_new )
     }
 
     if ( fits_close_file(fptr_new, &status) )
+    {
+        printf( " error while closing the file\n" );
+    }
+
+    if ( fits_close_file(fptr_e, &status) )
     {
         printf( " error while closing the file\n" );
     }
@@ -239,6 +266,14 @@ int write_prof ( char *name, double *p )
 	}
     //printf ("%d\n", colnum);
 
+    /*
+	int i;
+	for (i = 0; i < 1024; i++)
+	{
+		printf ("%d %lf\n", i, p[i]);
+	}
+	*/
+
 	int nbin;
     int frow;
     int felem;
@@ -247,8 +282,8 @@ int write_prof ( char *name, double *p )
 	nbin = 1024;
     frow = 1;
     felem = 1;
-    nelem = 1;
-    //nelem = 1024;
+    //nelem = 1;
+    nelem = 1024;
 
     if ( fits_write_col(fptr, TDOUBLE, colnum, frow, felem, nelem, p, &status) )           // read the column
     {
