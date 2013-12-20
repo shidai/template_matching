@@ -261,27 +261,21 @@ int print_t2pred ( char *name )
     return 0;
 }
 
-double read_freq ( char *name, int subint )
+int read_freq ( char *name, int subint, double *freq, int nchan)
 //int main (int argc, char *argv[] )
 {  
     fitsfile *fptr;       // pointer to the FITS file, defined in fitsio.h 
     int status;
     int colnum;
-    long int nrows;
 
     status = 0;
 
     if ( fits_open_file(&fptr, name, READONLY, &status) )          // open the file
+    //if ( fits_open_file(&fptr, argv[1], READONLY, &status) )          // open the file
     {
         printf( "error while openning file\n" );
     }
 
-    if ( fits_get_num_rows(fptr, &nrows, &status) )           // get the row number
-    {
-        printf( "error while getting the row number\n" );
-    }
-    //printf ("%ld\n", nrows);
-    
     if ( fits_get_colnum(fptr, CASEINSEN, "DAT_FREQ", &colnum, &status) )           // get the colnum number
     {
         printf( "error while getting the colnum number\n" );
@@ -291,21 +285,22 @@ double read_freq ( char *name, int subint )
 
     int frow;
     int	felem = 1;
-    int nelem = 1;
+    int nelem = nchan;
     int null = 0;
     int	anynull = 0;
 
-	double freq;
+	//int subint = 1;
+	//int nchan = 8;
+	//double freq[nchan];
+	frow = subint;
+
+    fits_read_col(fptr, TDOUBLE, colnum, frow, felem, nelem, &null, freq, &anynull, &status);           // read the column
 
 	//int i;
-    //for (i = 1; i <= nrows; i++)                             // print the results
+    //for (i = 0; i < nchan; i++)                             // print the results
 	//{
-		frow = subint;
-
-        fits_read_col(fptr, TDOUBLE, colnum, frow, felem, nelem, &null, &freq, &anynull, &status);           // read the column
-
 		//puts(line[0]);
-        //printf("%lf\n", freq);
+    //    printf("%lf\n", freq[i]);
 		//fprintf (fp, "%s\n", line[0]);
 	//}
 
@@ -314,7 +309,58 @@ double read_freq ( char *name, int subint )
         printf( " error while closing the file \n" );
     }
 
-    return freq;
+    return 0;
+}
+
+int read_wts ( char *name, int subint, double *wts, int nchan)
+//int main (int argc, char *argv[] )
+{  
+    fitsfile *fptr;       // pointer to the FITS file, defined in fitsio.h 
+    int status;
+    int colnum;
+
+    status = 0;
+
+    if ( fits_open_file(&fptr, name, READONLY, &status) )          // open the file
+    //if ( fits_open_file(&fptr, argv[1], READONLY, &status) )          // open the file
+    {
+        printf( "error while openning file\n" );
+    }
+
+    if ( fits_get_colnum(fptr, CASEINSEN, "DAT_WTS", &colnum, &status) )           // get the colnum number
+    {
+        printf( "error while getting the colnum number\n" );
+		//fits_get_colnum(fptr, CASEINSEN, "DATA", &colnum, &status);
+	}
+    //printf ("%d\n", colnum);
+
+    int frow;
+    int	felem = 1;
+    int nelem = nchan;
+    int null = 0;
+    int	anynull = 0;
+
+	//int subint = 1;
+	//int nchan = 8;
+	//double wts[nchan];
+	frow = subint;
+
+    fits_read_col(fptr, TDOUBLE, colnum, frow, felem, nelem, &null, wts, &anynull, &status);           // read the column
+
+	//int i;
+    //for (i = 0; i < nchan; i++)                             // print the results
+	//{
+		//puts(line[0]);
+    //    printf("%lf\n", wts[i]);
+		//fprintf (fp, "%s\n", line[0]);
+	//}
+
+    if ( fits_close_file(fptr, &status) )
+    {
+        printf( " error while closing the file \n" );
+    }
+
+    return 0;
 }
 
 double read_offs ( char *name, int subint)
@@ -378,7 +424,7 @@ int read_prof ( char *name, int subint, double *profile )
 {  
 //double *read_arrival_time( char *input, long *nrows )
     //int subint = 1;
-	//double profile[1024];
+	//double profile[8*1024];
     fitsfile *fptr;       // pointer to the FITS file, defined in fitsio.h 
     int status;
     int colnum;
@@ -454,4 +500,3 @@ int read_prof ( char *name, int subint, double *profile )
 
     return 0;
 }
-

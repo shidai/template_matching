@@ -53,7 +53,9 @@ int main (int argc, char *argv[])
 	////////////////////////////////////////////////
 
 	// read a std
-	
+	char std[30];
+	strcpy(std,argv[2]);
+	strcat(std, data);
 	//puts(argv[1]);
 	//puts(argv[2]);
 	double s[nphase];
@@ -61,7 +63,7 @@ int main (int argc, char *argv[])
 	//int n;
 
 	//readfile(argv[1],&n,tt,s);
-	read_prof(argv[2],1,s);
+	read_prof(std,1,s);
 
 	/*
 	int i;
@@ -71,7 +73,17 @@ int main (int argc, char *argv[])
 	}
 	//puts(argv[1]);
 	*/
+	/////////////////////////////////////////////////////////////////////////////////
+	FILE *fp;
+	if ((fp = fopen("test.txt", "w+")) == NULL)
+	{
+        fprintf (stdout, "Can't open file\n");
+		exit(1);
+	}
 	
+	fprintf (fp, "FORMAT 1\n");
+
+	////////////////////////////////////////////////////////////////////////////////
 	double s_multi[nphase*nchn*npol];
 
 	double p_multi[nchn*npol*nphase];
@@ -79,7 +91,7 @@ int main (int argc, char *argv[])
     //double SNR; 
 
 	double rms[nchn];  // rms for each profile
-	int h,i,j;
+	int h,i,j,z;
 	double phase, e_phase;
 	long double dt, e_dt;  
 	long double t;     // TOA
@@ -87,7 +99,8 @@ int main (int argc, char *argv[])
 	long double mjd0;  // the mjd of each subint
 	T2Predictor pred;
 	int ret;
-	double period, freq;
+	double period, frequency, weight;
+	double freq[nchn], wts[nchn];
 	for (h = 1; h <= nsub; h++)
 	{
 	    //////////////////////////////////////////////////////////////////////////
@@ -112,9 +125,24 @@ int main (int argc, char *argv[])
 			rms[i] = get_toa(s, p_temp);
 		}
 
+		// do template matching, get the phase shift
+		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase);
+
+		////////////////////////////////////////////////////////////////////////////////////////
+
+		// transform phase shift to TOAs
 		// get the freq of the subint
-		freq = read_freq(name_data, h);
-	    printf ("Frequency is %lf\n", freq);
+		read_freq(name_data, h, freq, nchn);
+		read_wts(name_data, h, wts, nchn);
+		frequency = 0.0;
+		weight = 0.0;
+		for (z = 0; z < nchn; z++)
+		{
+			frequency += freq[z]*wts[z];
+			weight += wts[z];
+		}
+		frequency = frequency/weight;
+	    printf ("Frequency is %lf\n", frequency);
 
 		// get the period
         print_t2pred(name_predict);   // output t2pred.dat
@@ -134,12 +162,9 @@ int main (int argc, char *argv[])
 		printf ("imjd is %ld \n", imjd);
 		printf ("mjd0 is %.15Lf \n", mjd0);
 
-		period = 1.0/T2Predictor_GetFrequency(&pred,mjd0,freq);
+		period = 1.0/T2Predictor_GetFrequency(&pred,mjd0,frequency);
 	    printf ("Period is %.15lf\n", period);
 	
-		// do template matching, get the phase shift
-		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase);
-
 		// transform phase shift to time shift
         //dt = (phase/PI)*period/2.0;
         //e_dt = (e_phase/PI)*period/2.0;
@@ -152,8 +177,12 @@ int main (int argc, char *argv[])
         //t = imjd;
 		
 	    printf ("offset is %lf\n", offset);
-		printf ("TOA is %.15Lf +/- %Lf\n", t, e_dt*1e+9);
+		fprintf (fp, "1713.pF  %lf  %.15Lf  %Lf  7\n", frequency, t, e_dt*1e+6);
 	}
+
+    if (fclose (fp) != 0)
+		fprintf (stderr, "Error closing\n");
+
 
 	return 0;
 }

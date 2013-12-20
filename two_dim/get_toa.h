@@ -20,8 +20,9 @@ int get_subint ( char *name );
 
 int read_prof ( char *name, int subint, double *profile );
 int print_t2pred ( char *name );
-double read_freq ( char *name, int subint );
 double read_offs ( char *name, int subint);
+int read_freq ( char *name, int subint, double *freq, int nchan );
+int read_wts ( char *name, int subint, double *wts, int nchan );
 
 int readfile ( char *filename, int *ntxt, double *x, double *y );
 
