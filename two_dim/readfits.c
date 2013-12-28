@@ -500,3 +500,87 @@ int read_prof ( char *name, int subint, double *profile )
 
     return 0;
 }
+
+
+double read_psrfreq ( char *name )
+//int main(int argc, char *argv[])
+{
+    fitsfile *fptr;       // pointer to the FITS file, defined in fitsio.h 
+    int status;
+
+    status = 0;
+
+    //if ( fits_open_file(&fptr, argv[1], READONLY, &status) )          // open the file
+    if ( fits_open_file(&fptr, name, READONLY, &status) )          // open the file
+    {
+        printf( "error while openning file\n" );
+    }
+
+	//////////////////////////////////////////////////////////////////////////
+	
+	char freq[100];
+	char F0[100];
+
+	int colnum = 1;
+    int frow = 6;
+    int	felem = 1;
+    int nelem = 1;
+    int	anynull = 0;
+    char nval[]="NULL";
+
+	char **line;
+	line = (char **)malloc(sizeof(char *));
+	line[0] = (char *)malloc(sizeof(char)*1024);
+
+	fits_read_col(fptr, TSTRING, colnum, frow, felem, nelem, nval, line, &anynull, &status);           // read the column
+
+	//puts(line[0]);
+
+	int nchar = strlen(line[0]);
+	//printf("strlen %d\n", nchar);
+
+	int i;
+	for (i = 0; i < nchar; i++)
+	{
+		F0[i] = line[0][i];
+	}
+	//printf("F0 %s\n", F0);
+
+	double a[10];
+	int l = 0;
+	int j = 0;
+	for (i = 0; i < nchar; i++)
+	{
+		if( (F0[i] >= '0' && F0[i] <= '9') || F0[i] =='.' ) 
+		{ 
+			freq[l] = F0[i];
+			l++;
+		}
+		else if(l > 0)
+		{
+			freq[l] = '\0';
+			a[j]=atof(freq);
+			j++;
+			l=0;
+		}
+	}
+
+	/*
+	for(i = 0; i < j; i++)
+	{
+        printf("%.15lf\n", a[i]);
+	}
+	*/
+ 
+	double psrfreq;
+	psrfreq = a[1];
+
+    if ( fits_close_file(fptr, &status) )
+    {
+        printf( " error while closing the file\n " );
+    }
+
+	return psrfreq;
+}
+
+

@@ -24,6 +24,8 @@ double read_offs ( char *name, int subint);
 int read_freq ( char *name, int subint, double *freq, int nchan );
 int read_wts ( char *name, int subint, double *wts, int nchan );
 
+double read_psrfreq ( char *name );
+
 int readfile ( char *filename, int *ntxt, double *x, double *y );
 
 int dft_profiles (int N, double *in, fftw_complex *out);
@@ -57,6 +59,6 @@ int error_multi (double phase, double b, double *errphase, double *errb, double 
 // calculate the rms of each profile
 int cal_rms (double phase, double b, double *rms, double a_s[][NP], double a_p[][NP], double p_s[][NP], double p_p[][NP], int num, int nchn);
 
-double get_toa (double s[1024], double p[1024]);
+double get_toa (double s[1024], double p[1024], double psrfreq);
 
-int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex);
+int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex, double psrfreq);

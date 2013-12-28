@@ -18,20 +18,29 @@
 int main (int argc, char *argv[])
 {
 	// name of different extension
-	char name_data[30]; 
-	char name_predict[30]; 
+	char name_data[50]; 
+	char name_predict[50]; 
+	char name_psrparam[50]; 
 
 	strcpy(name_data,argv[1]);
 	strcpy(name_predict,argv[1]);
+	strcpy(name_psrparam,argv[1]);
 
 	char data[] = "[SUBINT]";
 	char predict[] = "[T2PREDICT]";
+	char psrparam[] = "[PSRPARAM]";
 
 	strcat(name_data, data);
 	strcat(name_predict, predict);
+	strcat(name_psrparam, psrparam);
 
 	//puts(name_data);
 	//puts(name_predict);
+	////////////////////////////////////////////////////
+	
+	double psrfreq;
+	psrfreq = read_psrfreq(name_psrparam);
+	printf ("%.15lf\n", psrfreq);
 	
 	////////////////////////////////////////////////
 	long int imjd, smjd;
@@ -122,11 +131,11 @@ int main (int argc, char *argv[])
 			}
 
 			// calculate toa, rms for each profile
-			rms[i] = get_toa(s, p_temp);
+			rms[i] = get_toa(s, p_temp, psrfreq);
 		}
 
 		// do template matching, get the phase shift
-		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase);
+		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase, psrfreq);
 
 		////////////////////////////////////////////////////////////////////////////////////////
 
@@ -177,7 +186,7 @@ int main (int argc, char *argv[])
         //t = imjd;
 		
 	    printf ("offset is %lf\n", offset);
-		fprintf (fp, "1713.pF  %lf  %.15Lf  %Lf  7\n", frequency, t, e_dt*1e+6);
+		fprintf (fp, "%s  %lf  %.15Lf  %Lf  7\n", argv[1], frequency, t, e_dt*1e+6);
 	}
 
     if (fclose (fp) != 0)

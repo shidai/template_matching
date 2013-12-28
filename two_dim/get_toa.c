@@ -11,7 +11,7 @@
 //double *a_s,*a_p,*p_s,*p_p;
 //int num;
 
-double get_toa (double s[1024], double p[1024])
+double get_toa (double s[1024], double p[1024], double psrfreq)
 {
     int nphase=1024;
     int nchn=1;
@@ -105,7 +105,8 @@ double get_toa (double s[1024], double p[1024])
     double errphase, errb;	
 
 	error(phase,b,&errphase,&errb, amp_s, amp_p, phi_s, phi_p, k,nchn);
-	printf ("%.10lf %.10lf\n", ((phase/3.1415926)*4.569651/2.0)*1.0e+3, ((errphase/3.1415926)*4.569651/2.0)*1.0e+3);  // microseconds
+	printf ("%.10lf %.10lf\n", ((phase/3.1415926)/(psrfreq*2.0))*1.0e+6, ((errphase/3.1415926)/(psrfreq*2.0))*1.0e+6);  // microseconds
+	//printf ("%.10lf %.10lf\n", ((phase/3.1415926)*4.569651/2.0)*1.0e+3, ((errphase/3.1415926)*4.569651/2.0)*1.0e+3);  // microseconds
 	//printf ("errphase %.10lf \n", ((errphase/3.1415926)*5.75/2.0)*1.0e+6);
 	//printf ("errb %.10lf \n", errb);
 	
@@ -116,7 +117,7 @@ double get_toa (double s[1024], double p[1024])
 	return rms;
 }
 
-int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex)
+int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex, double psrfreq)
 {
     int nphase=1024;
 
@@ -210,7 +211,8 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 
 	error_multi(phase,b,&errphase,&errb, amp_s, amp_p, phi_s, phi_p, k, nchn, rms);
 	printf ("multi-template\n");
-	printf ("%.10lf %.10lf\n", ((phase/3.1415926)*4.569651/2.0)*1.0e+3, ((errphase/3.1415926)*4.569651/2.0)*1.0e+3);  // microseconds
+	printf ("%.10lf %.10lf\n", ((phase/3.1415926)/(psrfreq*2.0))*1.0e+6, ((errphase/3.1415926)/(psrfreq*2.0))*1.0e+6);  // microseconds
+	//printf ("%.10lf %.10lf\n", ((phase/3.1415926)*4.569651/2.0)*1.0e+3, ((errphase/3.1415926)*4.569651/2.0)*1.0e+3);  // microseconds
 	//printf ("errphase %.10lf \n", ((errphase/3.1415926)*5.75/2.0)*1.0e+6);
 	//printf ("errb %.10lf \n", errb);
 	
