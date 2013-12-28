@@ -7,7 +7,7 @@
 #include <fftw3.h>
 #include "fitsio.h"
 
-#define NP 512
+#define NP 2048
 #define PI 3.14159265359
 
 long int stt_imjd ( char *name );
@@ -16,9 +16,10 @@ double stt_offs ( char *name );
 
 int get_nchan ( char *name );
 int get_npol ( char *name );
+int get_nphase ( char *name );
 int get_subint ( char *name );
 
-int read_prof ( char *name, int subint, double *profile );
+int read_prof ( char *name, int subint, double *profile, int phase );
 int print_t2pred ( char *name );
 double read_offs ( char *name, int subint);
 int read_freq ( char *name, int subint, double *freq, int nchan );
@@ -59,6 +60,6 @@ int error_multi (double phase, double b, double *errphase, double *errb, double 
 // calculate the rms of each profile
 int cal_rms (double phase, double b, double *rms, double a_s[][NP], double a_p[][NP], double p_s[][NP], double p_p[][NP], int num, int nchn);
 
-double get_toa (double s[1024], double p[1024], double psrfreq);
+double get_toa (double *s, double *p, double psrfreq, int nphase);
 
-int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex, double psrfreq);
+int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex, double psrfreq, int nphase);

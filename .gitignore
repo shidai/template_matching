@@ -9,3 +9,5 @@
 *.tim
 1713*
 *.fits
+*.par
+*.std

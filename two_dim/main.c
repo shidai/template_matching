@@ -45,7 +45,7 @@ int main (int argc, char *argv[])
 	////////////////////////////////////////////////
 	long int imjd, smjd;
 	double offs;
-    int nphase=1024;
+    int nphase;
 	int nchn;
 	int nsub;
 	int npol;
@@ -57,12 +57,13 @@ int main (int argc, char *argv[])
     nchn = get_nchan(name_data);	
     npol = get_npol(name_data);	
     nsub = get_subint(name_data);	
+    nphase = get_nphase(name_data);	
 
 	//printf ("%d\n", nchn);
 	////////////////////////////////////////////////
 
 	// read a std
-	char std[30];
+	char std[50];
 	strcpy(std,argv[2]);
 	strcat(std, data);
 	//puts(argv[1]);
@@ -72,7 +73,7 @@ int main (int argc, char *argv[])
 	//int n;
 
 	//readfile(argv[1],&n,tt,s);
-	read_prof(std,1,s);
+	read_prof(std,1,s,nphase);
 
 	/*
 	int i;
@@ -118,7 +119,7 @@ int main (int argc, char *argv[])
 		//SNR = 500.0 + 200.0*i;
 	    //simulate(n,SNR,s,p_temp);
 
-	    read_prof(name_data,h,p_multi);
+	    read_prof(name_data,h,p_multi,nphase);
 	    //readfile(argv[2],&n,tt,p_multi);
 
 		for (i = 0; i < nchn; i++)
@@ -131,11 +132,11 @@ int main (int argc, char *argv[])
 			}
 
 			// calculate toa, rms for each profile
-			rms[i] = get_toa(s, p_temp, psrfreq);
+			rms[i] = get_toa(s, p_temp, psrfreq, nphase);
 		}
 
 		// do template matching, get the phase shift
-		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase, psrfreq);
+		get_toa_multi(s_multi, p_multi, rms, nchn, &phase, &e_phase, psrfreq, nphase);
 
 		////////////////////////////////////////////////////////////////////////////////////////
 

@@ -11,9 +11,9 @@
 //double *a_s,*a_p,*p_s,*p_p;
 //int num;
 
-double get_toa (double s[1024], double p[1024], double psrfreq)
+double get_toa (double *s, double *p, double psrfreq, int nphase)
 {
-    int nphase=1024;
+    //int nphase=1024;
     int nchn=1;
 
 	// read a std
@@ -44,10 +44,11 @@ double get_toa (double s[1024], double p[1024], double psrfreq)
 
 	//double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
 	//double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
-	double amp_s[nchn][NP],amp_p[nchn][NP];  // elements for calculating A7
-	double phi_s[nchn][NP],phi_p[nchn][NP];
+	double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
+	double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
 
 	preA7(&k, amp_s, amp_p, phi_s, phi_p, s, p, nphase, nchn);
+	//printf ("%d\n", nchn);
 	
 	// initial guess of the phase
     int peak_s, peak_p;	
@@ -60,11 +61,13 @@ double get_toa (double s[1024], double p[1024], double psrfreq)
 	double ini_phase,up_phase,low_phase;
 
 	d=peak_p-peak_s;
-	step=2.0*3.1415926/10240.0;
+	step=2.0*3.1415926/(10.0*nphase);
+	//step=2.0*3.1415926/10240.0;
 
 	if (d>=nphase/2)
 	{
-		ini_phase=2.0*3.1415926*(1023-d)/1024.0;
+		ini_phase=2.0*3.1415926*(nphase-1-d)/nphase;
+		//ini_phase=2.0*3.1415926*(1023-d)/1024.0;
 		up_phase=ini_phase+step;
 		low_phase=ini_phase-step;
 		while (A7(up_phase, amp_s, amp_p, phi_s, phi_p, k, nchn)*A7(low_phase, amp_s, amp_p, phi_s, phi_p, k, nchn)>0.0)
@@ -75,7 +78,8 @@ double get_toa (double s[1024], double p[1024], double psrfreq)
 	}
 	else
 	{
-		ini_phase=-2.0*3.1415926*d/1024.0;
+		ini_phase=-2.0*3.1415926*d/nphase;
+		//ini_phase=-2.0*3.1415926*d/1024.0;
 		up_phase=ini_phase+step;
 		low_phase=ini_phase-step;
 		while (A7(up_phase, amp_s, amp_p, phi_s, phi_p, k, nchn)*A7(low_phase, amp_s, amp_p, phi_s, phi_p, k, nchn)>0.0)
@@ -117,9 +121,9 @@ double get_toa (double s[1024], double p[1024], double psrfreq)
 	return rms;
 }
 
-int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex, double psrfreq)
+int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, double *errphasex, double psrfreq, int nphase)
 {
-    int nphase=1024;
+    //int nphase=1024;
 
 	// read a std
 	
@@ -149,8 +153,8 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 
 	//double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
 	//double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
-	double amp_s[nchn][NP],amp_p[nchn][NP];  // elements for calculating A7
-	double phi_s[nchn][NP],phi_p[nchn][NP];
+	double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
+	double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
 
 	preA7(&k, amp_s, amp_p, phi_s, phi_p, s, p, nphase, nchn);
 	
@@ -165,11 +169,12 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 	double ini_phase,up_phase,low_phase;
 
 	d=peak_p-peak_s;
-	step=2.0*3.1415926/10240.0;
+	step=2.0*3.1415926/(10.0*nphase);
+	//step=2.0*3.1415926/10240.0;
 
 	if (d>=nphase/2)
 	{
-		ini_phase=2.0*3.1415926*(1023-d)/1024.0;
+		ini_phase=2.0*3.1415926*(nphase-1-d)/nphase;
 		up_phase=ini_phase+step;
 		low_phase=ini_phase-step;
 		while (A7_multi(up_phase, amp_s, amp_p, phi_s, phi_p, k, nchn, rms)*A7_multi(low_phase, amp_s, amp_p, phi_s, phi_p, k, nchn, rms)>0.0)
@@ -180,7 +185,7 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 	}
 	else
 	{
-		ini_phase=-2.0*3.1415926*d/1024.0;
+		ini_phase=-2.0*3.1415926*d/nphase;
 		up_phase=ini_phase+step;
 		low_phase=ini_phase-step;
 		while (A7_multi(up_phase, amp_s, amp_p, phi_s, phi_p, k, nchn, rms)*A7_multi(low_phase, amp_s, amp_p, phi_s, phi_p, k, nchn, rms)>0.0)

@@ -158,6 +158,38 @@ int get_npol ( char *name )
     return npol;
 }
 
+int get_nphase ( char *name )
+{  
+//double *read_arrival_time( char *input, long *nrows )
+    fitsfile *fptr;       // pointer to the FITS file, defined in fitsio.h 
+    int status;
+
+    status = 0;
+
+    if ( fits_open_file(&fptr, name, READONLY, &status) )          // open the file
+    {
+        printf( "error while openning file\n" );
+    }
+
+	//////////////////////////////////////////////////////////////////////////
+	int nbin;
+    if ( fits_read_key(fptr, TINT, (char *)"NBIN", &nbin, NULL, &status) )           // get the row number
+    {
+        printf( "error while getting the nbin number\n" );
+		//fits_get_colnum(fptr, CASEINSEN, "DATA", &colnum, &status);
+	}
+    printf ("number of nbin: %d\n", nbin);
+
+	///////////////////////////////////////////////////////////////////////////
+
+    if ( fits_close_file(fptr, &status) )
+    {
+        printf( " error while closing the file " );
+    }
+
+    return nbin;
+}
+
 int get_subint ( char *name )
 {  
 //double *read_arrival_time( char *input, long *nrows )
@@ -420,7 +452,7 @@ double read_offs ( char *name, int subint)
 }
 
 //int main ( int argc, char *argv[] )
-int read_prof ( char *name, int subint, double *profile )
+int read_prof ( char *name, int subint, double *profile, int nphase)
 {  
 //double *read_arrival_time( char *input, long *nrows )
     //int subint = 1;
@@ -478,7 +510,7 @@ int read_prof ( char *name, int subint, double *profile )
     int anynull;
     //double *profile;     // the array to store the profile   
 
-	nbin = 1024;
+	nbin = nphase;
     //profile = ( double *)malloc( (nchan*npol*nbin) * sizeof( double ) );               // allocate space for column value
     frow = subint;
     felem = 1;
