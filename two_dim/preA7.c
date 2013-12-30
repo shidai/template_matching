@@ -79,7 +79,7 @@ int preA7 (int *k, double amp_s[][NP], double amp_p[][NP], double phi_s[][NP], d
 		    //printf ("%lf %lf %lf\n", r_p[i], im_p[i], amp_p[i]);
 		    //printf ("%lf\n", amp_s[i]);
 		    //printf ("%lf\n", phi_p[i][j]);
-		    printf ("%d %d\n", i,j);
+		    //printf ("%d %d\n", i,j);
 	    }
 	}
 	(*k)=n;

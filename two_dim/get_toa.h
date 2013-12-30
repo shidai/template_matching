@@ -7,6 +7,7 @@
 #include <fftw3.h>
 #include "fitsio.h"
 
+//#define NP 256
 #define NP 2048
 #define PI 3.14159265359
 

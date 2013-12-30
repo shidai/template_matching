@@ -152,8 +152,9 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 
 	//double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
 	//double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
-	double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
-	double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
+	double amp_s[nchn][NP],amp_p[nchn][NP];  // elements for calculating A7
+	double phi_s[nchn][NP],phi_p[nchn][NP];  // the second dim should be NP, which is large enough for different observations
+
 
 	//printf ("%d\n", nchn);
 	preA7(&k, amp_s, amp_p, phi_s, phi_p, s, p, nphase, nchn);
