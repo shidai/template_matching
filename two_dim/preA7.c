@@ -42,7 +42,7 @@ int preA7 (int *k, double amp_s[][NP], double amp_p[][NP], double phi_s[][NP], d
 	double r_p[nphase/2],im_p[nphase/2];
 	for (i = 0; i < nchn; i++)
 	{
-	    for (j=0;j<nphase;j++)
+	    for (j=0;j < nphase;j++)
 	    {
 		    s_temp[j]=s[i*nphase + j];
 		    p_temp[j]=p[i*nphase + j];
@@ -68,7 +68,6 @@ int preA7 (int *k, double amp_s[][NP], double amp_p[][NP], double phi_s[][NP], d
 		    n++;
 	    }
 	    //printf ("%d\n", n);
-	    //printf ("%d %d\n", nphase, nchn);
 
 	    for (j = 0; j < n; j++)
 	    {
@@ -79,7 +78,8 @@ int preA7 (int *k, double amp_s[][NP], double amp_p[][NP], double phi_s[][NP], d
 		    //printf ("%lf %lf %lf\n", r_s[i], im_s[i], amp_s[i]);
 		    //printf ("%lf %lf %lf\n", r_p[i], im_p[i], amp_p[i]);
 		    //printf ("%lf\n", amp_s[i]);
-		    //printf ("%lf\n", amp_p[i]);
+		    //printf ("%lf\n", phi_p[i][j]);
+		    printf ("%d %d\n", i,j);
 	    }
 	}
 	(*k)=n;
@@ -88,6 +88,7 @@ int preA7 (int *k, double amp_s[][NP], double amp_p[][NP], double phi_s[][NP], d
 	fftw_free(out_p); 
 	fftw_free(out_t); 
 
+	//printf ("%d %d\n", nphase, nchn);
 	return 0;
 }
 

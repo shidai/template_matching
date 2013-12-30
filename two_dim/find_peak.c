@@ -9,6 +9,7 @@
 int find_peak (int n, double *s, int *position)
 {
 	int i;
+	//printf ("************************\n");
 	double temp[n];
 	double peak;
 

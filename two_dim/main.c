@@ -68,12 +68,13 @@ int main (int argc, char *argv[])
 	strcat(std, data);
 	//puts(argv[1]);
 	//puts(argv[2]);
-	double s[nphase];
+	double s_temp[nphase];
+	double s_multi[nphase*nchn*npol];
 	//double tt[nphase];
 	//int n;
 
 	//readfile(argv[1],&n,tt,s);
-	read_prof(std,1,s,nphase);
+	read_prof(std,1,s_multi,nphase);
 
 	/*
 	int i;
@@ -94,10 +95,10 @@ int main (int argc, char *argv[])
 	fprintf (fp, "FORMAT 1\n");
 
 	////////////////////////////////////////////////////////////////////////////////
-	double s_multi[nphase*nchn*npol];
 
 	double p_multi[nchn*npol*nphase];
 	double p_temp[nphase];
+	//double s_temp[nphase];
     //double SNR; 
 
 	double rms[nchn];  // rms for each profile
@@ -127,12 +128,13 @@ int main (int argc, char *argv[])
 			for (j = 0; j < nphase; j++)
 			{
 				//printf ("%lf %lf\n", p_multi[j], s[j]);
-				s_multi[i*nphase + j] = s[j];
+				//s_multi[i*nphase + j] = s_temp[j];
 				p_temp[j] = p_multi[i*nphase + j];
+				s_temp[j] = s_multi[i*nphase + j];
 			}
 
 			// calculate toa, rms for each profile
-			rms[i] = get_toa(s, p_temp, psrfreq, nphase);
+			rms[i] = get_toa(s_temp, p_temp, psrfreq, nphase);
 		}
 
 		// do template matching, get the phase shift

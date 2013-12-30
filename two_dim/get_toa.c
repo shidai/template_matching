@@ -148,7 +148,6 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 	// dft profile and template
 	
 	//nchn = n/nphase;
-	//printf ("%d\n", nchn);
 	int k;  // k=nphase/2
 
 	//double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
@@ -156,11 +155,14 @@ int get_toa_multi (double *s, double *p, double *rms, int nchn, double *phasex, 
 	double amp_s[nchn][nphase/2],amp_p[nchn][nphase/2];  // elements for calculating A7
 	double phi_s[nchn][nphase/2],phi_p[nchn][nphase/2];
 
+	//printf ("%d\n", nchn);
 	preA7(&k, amp_s, amp_p, phi_s, phi_p, s, p, nphase, nchn);
+	//printf ("/////////////////\n");
 	
 	// initial guess of the phase
     int peak_s, peak_p;	
 
+	//printf ("/////////////////\n");
 	find_peak(nphase,s,&peak_s);
 	find_peak(nphase,p,&peak_p);
 
